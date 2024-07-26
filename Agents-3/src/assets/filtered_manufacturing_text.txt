@@ -1,0 +1,4585 @@
+describes on safety and handling, details on specifications, 
+necessary items on maintenance and inspection, to explain 
+operating instructions and maintenance procedures.  Be sure to 
+read and understand this instruction manual thoroughly before 
+installing and operating the manipulator. Any matter not described 
+in this manual must be regarded as “prohibited” or “improper”.
+•
+General information related to safety are described in “Chapter 1. 
+Safety” of the YRC1000 INSTRUCTIONS. To ensure correct and 
+safe operation, carefully read “Chapter 1. Safety” of the YRC1000 
+INSTRUCTIONS.
+CAUTION
+•
+In some drawings in this manual, protective covers or shields are 
+removed to show details. Make sure that all the covers or shields 
+are installed in place before operating this product.The drawings 
+and photos in this manual are representative examples and 
+differences may exist between them and the delivered product.
+•
+YASKAWA is not responsible for incidents arising from unauthorized 
+modification of its products.  Unauthorized modification voids the 
+product warranty.
+NOTICE
+•
+The drawings and photos in this manual are representative 
+examples and differences may exist between them and the 
+delivered product.
+•
+YASKAWA may modify this model without notice when necessary 
+due to product improvements, modifications, or changes in 
+specifications. If such modification is made, the manual number will 
+also be revised.
+•
+If your copy of the manual is damaged or lost, contact a YASKAWA 
+representative to order a new copy. The representatives are listed 
+on the back cover.  Be sure to tell the representative the manual 
+number listed on the front cover.
+2/64
+iii
+HW1483896
+HW1483896
+Notes for Safe Operation
+Read this manual carefully before installation, operation, maintenance, or 
+inspection of the MOTOMAN-GP8/AR700, -GP7/AR900. 
+In this manual, the Notes for Safe Operation are classified as “DANGER”, 
+“WARNING”, “CAUTION”, “MANDATORY”, or “PROHIBITED”.
+Even items described as “CAUTION” may result in a serious accident in 
+some situations.
+At any rate, be sure to follow these important items.
+DANGER
+Indicates an imminently hazardous 
+situation which, if not avoided, will 
+result in death or serious injury.  
+Safety Signs identified by the signal 
+word DANGER should be used 
+sparingly and only for those 
+situations presenting the most 
+serious hazards.  
+WARNING
+Indicates a potentially hazardous 
+situation which, if not avoided, will 
+result in death or serious injury.  
+Hazards identified by the signal 
+word WARNING present a lesser 
+degree of risk of injury or death than 
+those identified by the signal word 
+DANGER.  
+CAUTION
+Indicates a hazardous situation, 
+which if not avoided, could result in 
+minor or moderate injury.  It may 
+also be used without the safety alert 
+symbol as an alternative to 
+“NOTICE”.  
+NOTICE
+NOTICE is the preferred signal word 
+to address practices not related to 
+personal injury.  The safety alert 
+symbol should not be used with this 
+signal word.  As an alternative to 
+“NOTICE”, the word “CAUTION” 
+without the safety alert symbol may 
+be used to indicate a message not 
+related to personal injury.  
+NOTE
+To ensure safe and efficient operation at all times, be sure 
+to follow all instructions, even if not designated as “DAN-
+GER”, “WARNING” and “CAUTION” . 
+3/64
+iv
+HW1483896
+HW1483896
+DANGER
+•
+Do not remove the motor, and do not release the brake.
+Failure to observe these safety precautions may result in death or 
+serious injury from unexpected turning of the manipulator's arm. 
+WARNING
+•
+Maintenance and inspection must be performed by specified 
+personnel.
+Failure to observe this caution may result in electric shock or injury.
+•
+For disassembly or repair, contact your YASKAWA representative.
+4/64
+v
+HW1483896
+HW1483896
+DANGER
+•
+Before operating the manipulator, make sure the servo power is 
+turned OFF by performing the following operations.  When the servo 
+power is turned OFF, the SERVO ON LED on the programming 
+pendant is turned OFF.
+– Press the emergency stop buttons on the front door of the 
+YRC1000, on the programming pendant, on the external control 
+device, etc.
+– Disconnect the safety plug of the safety fence. 
+(when in the play mode or in the remote mode)
+If operation of the manipulator cannot be stopped in an emergency, 
+personal injury and/or equipment damage may result.
+Fig. : Emergency Stop Button
+•
+Before releasing the emergency stop, make sure to remove the 
+obstacle or error caused the emergency stop, if any, and then turn 
+the servo power ON. 
+Failure to observe this instruction may cause unintended movement of 
+the manipulator, which may result in personal injury. 
+Fig. : Release of Emergency Stop
+TURN
+•
+Observe the following precautions when performing a teaching 
+operation within the manipulator's operating range:
+– Be sure to perform lockout by putting a lockout device on the 
+safety fence when going into the area enclosed by the safety 
+fence.  In addition, the operator of the teaching operation must 
+display the sign that the operation is being performed so that no 
+other person closes the safety fence.
+– View the manipulator from the front whenever possible.
+– Always follow the predetermined operating procedure.
+– Always keep in mind emergency response measures against the 
+manipulator’s unexpected movement toward a person.
+– Ensure a safe place to retreat in case of emergency.
+Failure to observe this instruction may cause improper or unintended 
+movement of the manipulator, which may result in personal injury. 
+•
+Confirm that no person is present in the manipulator's operating 
+range and that the operator is in a safe location before: 
+– Turning ON the YRC1000 power 
+– Moving the manipulator by using the programming pendant 
+– Running the system in the check mode
+– Performing automatic operations 
+Personal injury may result if a person enters the manipulator's 
+operating range during operation.  Immediately press an emergency 
+stop button whenever there is a problem.  The emergency stop buttons 
+are located on the front panel of the YRC1000 and on the right of the 
+programming pendant.
+•
+Read and understand the Explanation of the Warning Labels before 
+operating the manipulator.
+5/64
+vi
+HW1483896
+HW1483896
+Definition of Terms Used Often in This Manual
+The MOTOMAN is the YASKAWA industrial robot product.
+The MOTOMAN usually consists of the manipulator, the controller, the 
+programming pendant, and supply cables.
+In this manual, the equipment is designated as follows:
+Registered Trademark
+In this manual, names of companies, corporations, or products are 
+trademarks, registered trademarks, or brand names for each company or 
+corporation.  The indications of (R) and TM are omitted.
+WARNING
+•
+Perform the following inspection procedures prior to conducting 
+manipulator teaching.   If there is any problem, immediately take 
+necessary steps to solve it, such as maintenance and repair.
+– Check for a problem in manipulator movement.
+– Check for damage to insulation and sheathing of external wires.
+•
+Always return the programming pendant to the hook on the 
+YRC1000 cabinet after use. 
+If the programming pendant is left unattended on the manipulator, on a 
+fixture, or on the floor, etc., the Enable Switch may be activated due to 
+surface irregularities of where it is left, and the servo power may be 
+turned ON.  In addition, in case the operation of the manipulator starts, 
+the manipulator or the tool may hit the programming pendant left 
+unattended, which may result in personal injury and/or equipment 
+damage. 
+Equipment
+Manual Designation
+YRC1000 controller
+YRC1000
+YRC1000 programming pendant
+Programming pendant
+Cable between the manipulator and the 
+controller
+Manipulator cable
+6/64
+vii
+HW1483896
+HW1483896
+Explanation of Warning Labels
+The following warning labels are attached to the manipulator.
+Always follow the warnings on the labels.
+Also, an identification label with important information is placed on the 
+body of the manipulator.  Prior to operating the manipulator, confirm the 
+contents.
+Fig. : Warning Label Locations
+Nameplate
+MADE IN JAPAN
+YASKAWA ELECTRIC CORPORATION
+Kitakyushu 806-0004 Japan
+2-1 Kurosakishiroishi, Yahatanishi-ku,
+MASS
+kg
+TYPE
+PAYLOAD
+NJ4030
+SERIAL NO.
+DATE
+kg
+Fall down hazard label
+Nameplate
+NJ4030
+Fall down hazard label
+7/64
+Contents
+viii
+HW1483896
+HW1483896
+1   Product Confirmation ......................................................................................................................1-1
+1.1   Contents Confirmation .......................................................................................................1-1
+1.2   Order Number Confirmation...............................................................................................1-3
+2   Transporting....................................................................................................................................2-1
+2.1   Transporting Method..........................................................................................................2-1
+2.1.1   Using a Crane.......................................................................................................2-2
+2.1.2   Using a Forklift......................................................................................................2-3
+3   Installation.......................................................................................................................................3-1
+3.1   Installation of the Safety fence...........................................................................................3-2
+3.2   Mounting Procedures for Manipulator Base.......................................................................3-2
+3.2.1   Mounting Example................................................................................................3-4
+3.3   Mounting Method ...............................................................................................................3-5
+3.3.1   Fixing the Manipulator Base .................................................................................3-5
+3.3.2   Precautions to Prevent the Manipulator from Falling............................................3-5
+3.4   Location .............................................................................................................................3-6
+4   Wiring..............................................................................................................................................4-1
+4.1   Grounding ..........................................................................................................................4-2
+4.2   Cable Connection ..............................................................................................................4-3
+5   Basic Specifications ........................................................................................................................5-1
+5.1   Basic Specifications...........................................................................................................5-1
+5.2   Part Names and Working Axes..........................................................................................5-2
+5.3   Baseplate Dimensions .......................................................................................................5-2
+5.4   Dimensions and P-Point Maximum Envelope....................................................................5-3
+5.5   Stopping Distance and Time for S-, L-, and U-Axes..........................................................5-4
+5.5.1   General Information..............................................................................................5-4
+5.5.2   Definition of Use ...................................................................................................5-4
+5.5.3   Stopping Distance and Time for Stop Category 0: S-, L- and U-Axes..................5-4
+5.5.4   Stopping Distance and Time for Stop Category 1: S-, L- and U-Axes..................5-5
+5.5.4.1   Extension.................................................................................................5-5
+5.5.4.2   Stopping Distance and Time for Stop Category 1: S-Axis.......................5-7
+5.5.4.3   Stopping Distance and Time for Stop Category 1: L-Axis .......................5-8
+5.5.4.4   Stopping Distance and Time for Stop Category 1: U-Axis.......................5-9
+5.6   Alterable Operating Range ..............................................................................................5-10
+8/64
+Contents
+ix
+HW1483896
+HW1483896
+5.6.1   Components for Altering Operating Range ........................................................ 5-10
+5.6.2   Notes on the Mechanical Stopper Installation .................................................... 5-12
+5.6.3   Adjustment to the Pulse Limitation of S-Axis...................................................... 5-12
+6   Allowable Load for Wrist Axis and Wrist Flange ............................................................................. 6-1
+6.1   Allowable Wrist Load ......................................................................................................... 6-1
+6.2   Wrist Flange....................................................................................................................... 6-2
+7   System Application ......................................................................................................................... 7-1
+7.1   Internal User I/O Wiring Harness and Air Lines................................................................. 7-1
+7.2   Soft Cover for Covering the Manipulator (Optional)........................................................... 7-4
+8   Electrical Equipment Specification.................................................................................................. 8-1
+8.1   Position of Servo ON Lamp ............................................................................................... 8-1
+8.2   Internal Connections.......................................................................................................... 8-2
+9   Maintenance and Inspection........................................................................................................... 9-1
+9.1   Inspection Schedule .......................................................................................................... 9-1
+9.2   Notes on Maintenance Procedures ................................................................................... 9-5
+9.2.1   Battery Pack Replacement................................................................................... 9-5
+9.3   Notes on Grease Replenishment Procedures ................................................................... 9-8
+9.3.1   Grease Replenishment for Each Axis Gear.......................................................... 9-9
+9.3.1.1   Grease Replenishment.......................................................................... 9-10
+9.4   Notes for Maintenance..................................................................................................... 9-11
+9.4.1   Multi-Port Connector........................................................................................... 9-11
+10   Recommended Spare Parts........................................................................................................ 10-1
+9/64
+1
+Product Confirmation
+1.1
+Contents Confirmation
+1-1
+HW1483896
+HW1483896
+1
+Product Confirmation
+1.1
+Contents Confirmation
+Confirm the contents of the delivery when the product arrives.
+Standard delivery includes the following five items (Information for the 
+content of optional goods is given separately):
+YRC1000 Packing contents
+• Manipulator (accessories included)
+• YRC1000 (spare parts included)
+• Programing Pendant
+• Three types of manipulator cables (between the YRC1000 and the 
+manipulator)
+• Manual
+Fig. 1-1: Five Items for Standard Specifications
+CAUTION
+•
+Confirm that the manipulator and the YRC1000 have the same 
+order number. Pay special attention when installing two or more 
+manipulators.
+Failure to observe this instruction may cause improper movement of 
+the manipulator, which may result in personal injury and/or equipment 
+damage. 
+YRC1000
+READ ONLY MEMORY
+Programming
+Pendant
+Manipulator
+Three Types of 
+Manipulator Cables
+Complete Set of Manuals
+(in the CD-ROM which is connected to the USB connector)
+(Data)
+CD-ROM which is connected to the USB connector
+10/64
+1
+Product Confirmation
+1.1
+Contents Confirmation
+1-2
+HW1483896
+HW1483896
+Accessories of Manipulator
+Pcs
+Application
+Hexagon socket head cap screw M12 (length:45 mm)
+4
+For mounting 
+(manipulator)
+Conical spring washer M12
+4
+Washer M12
+4
+Eyebolt M8
+2
+For lifting 
+(manipulator)
+Grease zerk A-PT1/8
+6
+For the grease 
+replenishment (gear part)
+Joint KQ2F06-01-X2
+6
+Pin HW1407797-5-85
+1
+For the home position 
+calibrating (S-axis)
+11/64
+1
+Product Confirmation
+1.2
+Order Number Confirmation
+1-3
+HW1483896
+HW1483896
+1.2
+Order Number Confirmation
+Confirm the order number of the manipulator corresponds to the 
+YRC1000. The order number is located on a label as shown below.
+Fig. 1-2: Location of Order Number Labels
+NJ4014-1
+(a) YRC1000 (Front View)
+(b) Manipulator (Back View)
+Label (Enlarged View)
+MODEL
+NJ4064
+MOTOMAN-****
+12/64
+2
+Transporting
+2.1
+Transporting Method
+2-1
+HW1483896
+HW1483896
+2
+Transporting
+2.1
+Transporting Method
+WARNING
+•
+Operation of the crane, sling, or forklift must be performed only by 
+authorized personnel. 
+Failure to observe this instruction may result in personal injury and/or 
+equipment damage. 
+NOTICE
+•
+Avoid excessive vibration or shock while transporting or moving the 
+YRC1000.
+Failure to observe this instruction may adversely affect the 
+performance of the YRC1000 because it consists of precision 
+components.
+NOTE
+•
+Check that the eyebolts are securely fastened.
+•
+The weight of the manipulator is approximately 47 kg 
+(including the shipping bolts and brackets). Use a wire 
+rope strong enough to withstand the weight.
+•
+Attached eyebolts are designed to support the 
+manipulator’ mass.  Do not use them for anything other 
+than transporting the manipulator.
+•
+Avoid applying external force on the arm or motor unit 
+when transporting by a crane, forklift, or other 
+equipment.  Failure to observe this instruction may 
+result in injury.
+13/64
+2
+Transporting
+2.1
+Transporting Method
+2-2
+HW1483896
+HW1483896
+2.1.1
+Using a Crane 
+As a rule, the manipulator should be lifted by a crane with two wire ropes 
+when removing it from the package and moving it.
+Be sure to lift the manipulator in the posture as shown in fig. 2-1  
+“Transporting Position (factory setting)” . The length of the wire rope must 
+be 155 mm or longer. (
+ indicates the position of the center of gravity).
+Fig. 2-1: Transporting Position (factory setting) 
+T
+0°
+0°
+S
+U
+B
+R
+L
+0°
+0
+0°
+0
+0°
+0
+0
+0
+0°
+0
+Factory setting for angle and pulse of each axis
+Axis
+Angle
+Pulse
+(170)
+(113)
+(265)
+(1065)
+(301)
+(541)
+(33)
+(450)
+14/64
+2
+Transporting
+2.1
+Transporting Method
+2-3
+HW1483896
+HW1483896
+2.1.2
+Using a Forklift 
+When using a forklift, the manipulator should be fixed on a pallet with 
+shipping bolts and brackets as shown in fig. 2-2  “Using a Forklift” . Insert 
+claws under the pallet and lift it. The pallet must be strong enough to 
+support the manipulator. 
+Transport the manipulator slowly with due caution in order to avoid 
+overturning or slippage. 
+Fig. 2-2: Using a Forklift
+Bolt M12 (4 bolts)
+Pallet
+Forklift claw entry
+15/64
+3
+Installation
+3-1
+HW1483896
+HW1483896
+3
+Installation
+DANGER
+•
+Perform the risk assessment.
+Failure to observe this warning may result in injury or damage.
+WARNING
+•
+Install the manipulator in a location where the tool or the workpiece 
+held by its fully extended arm will not reach the wall, the safety 
+fence, or the YRC1000, etc.
+Failure to observe this waring may result in injury or damage.
+•
+Make sure to firmly anchor the manipulator before turning ON the 
+power and operating the manipulator. 
+Failure to observe this instruction may cause overturning of the 
+manipulator, which may result in personal injury and/or equipment 
+damage. 
+•
+When mounting the manipulator on the wall, the wall must have 
+sufficient strength and rigidity to support the weight of the 
+manipulator.  In addition, take precautionary measures on the 
+manipulator base to prevent the manipulator from falling.
+Failure to observe this instruction may result in personal injury and/or 
+equipment damage.
+•
+Do not install or operate a damaged manipulator or a manipulator 
+any of whose components is missing. 
+Failure to observe this instruction may cause improper movement, etc. 
+of the manipulator, which may result in personal injury and/or 
+equipment damage.
+NOTICE
+•
+After completing the installation of the manipulator, make sure to 
+remove the shipping bolts and brackets before turning ON the 
+power. 
+Failure to observe this instruction may result in damage to the main 
+drive unit. 
+16/64
+3
+Installation
+3.1
+Installation of the Safety fence
+3-2
+HW1483896
+HW1483896
+3.1
+Installation of the Safety fence
+To insure safety, be sure to install safety fence. They prevent unforeseen 
+accidents with personnel and damage to equipment.  The following is 
+quoted for your information and guidance.
+Responsibility for Safeguarding (ISO10218)
+When designing a robot system in which an operator and a robot 
+collaborate in the environment of no safeguarding, sufficient risk 
+assessment should be carried out to avoid damages to the equipment or 
+unexpected injury to the operator or people around the system during the 
+operation.
+3.2
+Mounting Procedures for Manipulator Base
+The manipulator should be firmly mounted on a baseplate or foundation 
+strong enough to support the manipulator and withstand reaction forces 
+during acceleration and deceleration.
+Construct a solid foundation with the appropriate thickness to withstand 
+maximum reaction forces of the manipulator referring to table 3-1  
+“Manipulator Reaction Force and Torque” .
+A baseplate flatness must be kept at 0.5 mm or less: insufficient flatness 
+of installation surface may deform the manipulator shape and affect its 
+functional abilities.  Mount the manipulator base as instructed in 
+chapter 3.2.1
+“Mounting Example” .
+Table 3-1: Manipulator Reaction Force and Torque
+Horizontal rotation 
+Vertical rotation 
+Reaction force FH
+Torque MH
+Reaction force FV
+Torque MV
+Emergency stop
+2548 N
+(260 kgf)
+1842 N•m
+(188 kgf•m)
+2254 N
+(230 kgf)
+1842 N•m
+(188 kgf•m)
+Acceleration/deceleration 784 N
+(80 kgf)
+559 N•m
+(57 kgf•m)
+784 N
+(80 kgf)
+696 N•m
+(71 kgf•m)
+17/64
+3
+Installation
+3.2
+Mounting Procedures for Manipulator Base
+3-3
+HW1483896
+HW1483896
+Fig. 3-1: Manipulator Reaction Force and Torque
+M V
+FV
+FH
+MH
+18/64
+3
+Installation
+3.2
+Mounting Procedures for Manipulator Base
+3-4
+HW1483896
+HW1483896
+3.2.1
+Mounting Example
+For the first process, anchor the base plate firmly to the ground.  The 
+baseplate should be rugged and durable to prevent shifting of the 
+manipulator or the mounting fixture.
+It is recommended to prepare a baseplate of 32 mm or more thickness, 
+and anchor bolts of M12 or larger size. 
+The manipulator base is tapped for four mounting holes.
+Fix the manipulator base to the baseplate with the four hexagon socket 
+head cap screws M12 (Tensile strength: 1200 N/mm2 or more, 
+recommended length: 45 mm) by using the tightening torque 84 Nm. 
+The hexagon socket head cap screws and the anchor bolts must be 
+tightened firmly so that they will not work loose during the operation.
+Refer to fig. 3-2  “Mounting Manipulator on Baseplate” . 
+Fig. 3-2: Mounting Manipulator on Baseplate
+Anchor bolt (M12 or larger)
+Baseplate
+67.5 ±0.1
+195 ±0.1
+67.5 ±0.1
+97.5 ±0.1
+97.5 ±0.1
+195 ±0.1
+ (Reference hole)
+Baseplate
+8 dia.               (2 holes) 
++ 0.015
+   0
+14 dia. hole for mounting (4 holes)
+16
+32 or longer
+Hexagon socket head cap 
+screw M12 (4 screws)
+Conical spring washer
+Washer
+19/64
+3
+Installation
+3.3
+Mounting Method
+3-5
+HW1483896
+HW1483896
+3.3
+Mounting Method
+The MOTOMAN-HC10 are available in four ways: floor-mounted, wall-
+mounted, tilt-mounted and ceiling-mounted way. 
+For wall-mounted, tilt-mounted and ceiling-mounted ways, the following 
+points listed below are different from the floor-mounted way.
+• Fixing of the Manipulator Base
+• Precautions to Prevent the Manipulator from Falling
+3.3.1
+Fixing the Manipulator Base
+For the wall- and ceiling-mounted ways, be sure to use four hexagon 
+socket head cap screws M12 (tensile strength: 1200 N/mm2 or more) 
+when fixing the manipulator base.  Use a torque of 84 N·m when 
+tightening the screws.
+3.3.2
+Precautions to Prevent the Manipulator from Falling
+For the wall- or ceiling-mounted ways, take appropriate measures to avoid 
+the falling of the manipulator in case of emergency.  Refer to fig. 3-3  
+“Precaution Against Falling”  for details.
+Fig. 3-3: Precaution Against Falling
+Manipulator base
+Support for fall prevention
+Hexagon socket head cap screw M12 (4 places)
+Washer, Conical spring washer
+(Tensile strength: 1200 N/mm2 or more)
+NOTE
+In case of using the wall-/ceiling-/tilt-mounted way, inform
+YASKAWA of the matter when placing an order.  Be sure to 
+contact YASKAWA representative (listed on the back cover 
+of this instruction manual) to execute a wall/ceiling installa-
+tion on site.
+20/64
+3
+Installation
+3.4
+Location
+3-6
+HW1483896
+HW1483896
+3.4
+Location
+When installing the manipulator, it is necessary to satisfy the following 
+environmental conditions:
+• Ambient Temperature: 0° to +40°C1)
+• Humidity: 20 to 80%RH (non-condensing)
+• Free from water, explosive gas or liquid, or corrosive gas or liquid.
+• Free from excessive vibration 
+(Vibration acceleration: 4.9 m/s2 [0.5G] or less)
+• Free from large electrical noise (plasma)
+• Flatness for installation: 0.5 mm or less
+• Free from the strong magnetic field
+• Altitude: 1000 m or less
+Procedures for inserting the connector (1BC)
+1.  Confirm the connector lever of the manipulator cable is at the initial 
+position. Insert the cable straight into the connector on the back side of 
+the YRC1000. Insert the manipulator cable to a fixed depth then the 
+lever rotates about 30 degree forward automatically.
+2. Push the lever with hand and turn it (about 30 degree) until the lock is 
+clicked.
+
+Procedures for removing the connector
+1.  Release the lock by pushing the unlock part of the lever to unlock. 
+Turn the lever about 60 degree to return to the initial position.
+2. Pull out the connector straight.
+Fig. 4-2(a): Connection of Manipulator Cable (1BC)
+(30  )
+(60  )
+(60  )
+Inserting
+Removing
+Initial position of lever
+Initial position of lever
+Pull out
+Insert
+Rotate automatically
+Rotate manually
+Rotate manually
+Push the unlock part
+24/64
+4
+Wiring
+4.2
+Cable Connection
+4-4
+HW1483896
+HW1483896
+
+Procedures for inserting the manipulator cable (For TQ and SW)
+1. Confirm that the direction of the arrow on the manipulator cable is 
+upward, and insert the cable straight into the manipulator and the 
+connector of the YRC1000.
+2. Turn the knob with the arrow mark to the direction of the arrow.
+
+Procedures for removing the manipulator cable (For TQ and SW)
+1. Turn the knob with the arrow mark to the opposite direction of the 
+arrow.
+2. Pull out the connector straight.
+Fig. 4-2(b): Connection of Manipulator Cable (TQ, SW)
+Inserting
+Removing
+Insert
+Arrow
+Pull out
+Arrow
+Turn in the opposite direction of the arrow.
+Turn in the direction of the arrow.
+25/64
+4
+Wiring
+4.2
+Cable Connection
+4-5
+HW1483896
+HW1483896
+Fig. 4-3: Manipulator Cable for YRC1000
+The YRC1000 side
+The Manipulator side
+1BC
+-X1
+Manipulator cable
+Cable for the torque sensor
+Cable for the switch/lamp
+26/64
+4
+Wiring
+4.2
+Cable Connection
+4-6
+HW1483896
+HW1483896
+Fig. 4-4: Manipulator Cable Connection (Manipulator Side)
+Fig. 4-5: Manipulator Cable Connection (YRC1000 Side)
+TQ
+SW
+1BC
+1BC
+S
+AIR2
+AIR1
+TQ
+SW
+X1
+TQ
+SW
+27/64
+5
+Basic Specifications
+5.1
+Basic Specifications
+5-1
+HW1483896
+HW1483896
+5
+Basic Specifications
+5.1
+Basic Specifications
+Table 5-1: Basic Specifications1)
+1
+SI units are used in this table.  However, gravitational unit is used in ( )
+Item                                                                 Model
+MOTOMAN-HC10
+Application
+For collaborative operation 
+Structure
+Vertically Articulated
+Degree of  freedom
+6
+Payload
+10 kg
+Repeatability2)
+2
+Conformed to ISO9283
+±0.1 mm
+Range of Motion
+S-Axis (turning)
+-180°  -  +180°
+L-Axis (lower arm)
+-180°  -  +180°
+U-Axis (upper arm)
+-5°      -  +355°
+R-Axis (wrist roll)
+-180°  -  +180°
+B-Axis (wrist pitch/yaw)
+-180°  -  +180°
+T-Axis (wrist twist)
+-180°  -  +180°
+Maximum Speed
+S-Axis
+2.27 rad/s, 130°/s
+L-Axis
+2.27 rad/s, 130°/s
+U-Axis
+3.14 rad/s, 180°/s
+R-Axis
+3.14 rad/s, 180°/s
+B-Axis
+4.36 rad/s, 250°/s
+T-Axis
+4.36 rad/s, 250°/s
+Allowable Moment3)
+3
+Refer to fig. 6-1  “Moment Arm Rating”  for details on the allowable inertia.
+R-Axis
+27.4 N•m (2.8 kgf•m)
+B-Axis
+27.4 N•m (2.8 kgf•m)
+T-Axis
+9.8 N•m (1.0 kgf•m)
+Allowable Inertia (GD24) R-Axis
+0.78 kg•m2
+B-Axis
+0.78 kg•m2
+T-Axis
+0.10 kg•m2
+Approx. Mass
+47 kg
+Protective enclosure
+IP20
+Mounting method
+Floor-, wall-, tilt-, ceiling-mounted,
+Ambient Conditions
+Temperature
+0 to 40°C4)
+4
+0 to +35°C when the soft cover for covering the manipulator (optional) is mounted for reducing the
+contact/collision impact.
+Humidity
+20 to 80% RH (non-condensing)
+Vibration
+4.9 m/s2 (0.5G) or less
+Altitude
+1000 m or less
+Others
+Free from corrosive gas or liquid, or explosive gas
+Free from dust, soot, or water
+Free from excessive electrical noise (plasma)
+Free from strong magnetic field
+Power Capacity
+1 kVA
+Applicable controller
+YRC1000
+Noise5)
+5
+Conformed to equivalent continuous A-weighted sound pressure level measured in accordance with
+ISO11201(EN31201)
+     1, Measurement is carried out when the maximum load is mounted to the manipulator and 
+    operated in the maximum speed.
+     2, Measurement is carried out:
+          -between 1.2 m and 1.5 m above the ground.
+          -400 mm away from the P-point maximum envelope.
+70 dB or less
+28/64
+5
+Basic Specifications
+5.2
+Part Names and Working Axes
+5-2
+HW1483896
+HW1483896
+5.2
+Part Names and Working Axes
+Fig. 5-1: Part Names and Working Axes
+5.3
+Baseplate Dimensions
+Fig. 5-2: Manipulator Base Dimensions
+T-
+T+
+B+
+B-
+R-
+R+
+U+
+U-
+L-
+L+
+S-
+S+
+Wrist flange
+Wrist
+Manipulator base
+Rotating head
+97.5 ±0.1
+67.5 ±0.1
+67.5 ±0.1
+97.5 ±0.1
+195
+195
+16
+Baseplate
+14 dia. hole for mounting (4 holes)
+8 dia.               (2 holes)
+ (Reference hole)
++ 0.015
+   0
+29/64
+5
+Basic Specifications
+5.4
+Dimensions and P-Point Maximum Envelope
+5-3
+HW1483896
+HW1483896
+5.4
+Dimensions and P-Point Maximum Envelope
+Fig. 5-3: Dimensions and P-Point Maximum Envelope (mm)
+R1200
+R1200
+R200
+R232
+180°
+180°
+162
+190
+475
+500
+700
+275
+0
+232
+925
+163
+475
+1475
+30/64
+5
+Basic Specifications
+5.5
+Stopping Distance and Time for S-, L-, and U-Axes
+5-4
+HW1483896
+HW1483896
+5.5
+Stopping Distance and Time for S-, L-, and U-Axes
+5.5.1
+General Information
+• The stopping distance is an angle traveled by the manipulator from 
+the moment when the stop signal is activated until the manipulator 
+comes to a complete standstill.
+• The stopping time is a time elapsed from the moment that the stop 
+signal is activated until the manipulator comes to a complete stand-
+still.
+• The data that are given for the main axes S, L and U are the maxi-
+mum displacement.
+• Superposed axes motions may result in longer stopping distance.
+• Stopping distance and stopping time are measured in accordance 
+with ISO 10218-1, Annex B
+• Stop categories: According to IEC60204-1
+• Stop category 0
+• Stop category 1
+• The values specified for Stop category 0 are the reference values 
+that are determined by tests and simulations.  The actual stopping 
+distance and stopping time may differ.
+5.5.2
+Definition of Use
+Load : 
+Rated load weight and load on an arm
+Speed : 
+Operating speed of the manipulator
+Extension : Distance between the rotation center and the P-point of
+each axis
+5.5.3
+Stopping Distance and Time for Stop Category 0: S-, L- and U-Axes
+Measurement Conditions
+• Load: 
+Maximum load
+• Speed: 
+Maximum speed
+• Posture:
+Maximum inertia generation posture
+Axis
+Stopping distance (deg)
+Stopping Time (sec)
+S-axis
+6.4
+0.082
+L-axis
+10.2
+0.144
+U-axis
+16.6
+0.140
+31/64
+5
+Basic Specifications
+5.5
+Stopping Distance and Time for S-, L-, and U-Axes
+5-5
+HW1483896
+HW1483896
+5.5.4
+Stopping Distance and Time for Stop Category 1: S-, L- and U-Axes
+5.5.4.1
+Extension
+Refer to fig. 5-4  “S-Axis Extension” ,fig. 5-5  “L-Axis Extension” and 
+fig. 5-6  “U-Axis Extension”  for each axis arm extension.
+Fig. 5-4: S-Axis Extension
+Fig. 5-5: L-Axis Extension
+100%=1200 mm
+66%
+33%
+L-axis
+U-axis
+B-axis Load
+L-axis
+U-axis
+B-axis
+Load
+L-axis
+U-axis
+B-axis
+Load
+100%=1200 mm
+66%
+33%
+L-axis
+U-axis
+B-axis Load
+L-axis
+U-axis
+B-axis
+Load
+L-axis
+U-axis
+B-axis
+Load
+32/64
+5
+Basic Specifications
+5.5
+Stopping Distance and Time for S-, L-, and U-Axes
+5-6
+HW1483896
+HW1483896
+Fig. 5-6: U-Axis Extension
+100%=500 mm
+L-axis
+B-axis
+U-axis
+Load
+33/64
+5
+Basic Specifications
+5.5
+Stopping Distance and Time for S-, L-, and U-Axes
+5-7
+HW1483896
+HW1483896
+5.5.4.2
+Stopping Distance and Time for Stop Category 1: S-Axis
+0
+5
+10
+15
+20
+25
+0
+20
+40
+60
+80
+100
+120
+Stopping angle[deg]
+Speed[deg/s]
+Extension 100% 
+Load100%
+Load66%
+Load33%
+0.0
+0.1
+0.2
+0.3
+0.4
+0
+20
+40
+60
+80
+100
+120
+Stopping time[sec]
+Speed[deg/s]
+Extension 100% 
+Load100%
+Load66%
+Load33%
+0
+5
+10
+15
+20
+25
+30
+35
+0
+50
+100
+150
+Stopping angle[deg]
+Speed[deg/s]
+Extension 66% 
+Load100%
+Load66%
+Load33%
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0
+50
+100
+150
+Stopping time[sec]
+Speed[deg/s]
+Extension 66% 
+Load100%
+Load66%
+Load33%
+0
+5
+10
+15
+20
+25
+30
+0
+50
+100
+150
+Stopping angle[deg]
+Speed[deg/s]
+Extension 33% 
+Load100%
+Load66%
+Load33%
+0.0
+0.1
+0.2
+0.3
+0.4
+0
+50
+100
+150
+Stopping time[sec]
+Speed[deg/s]
+Extension 33% 
+Load100%
+Load66%
+Load33%
+34/64
+5
+Basic Specifications
+5.5
+Stopping Distance and Time for S-, L-, and U-Axes
+5-8
+HW1483896
+HW1483896
+5.5.4.3
+Stopping Distance and Time for Stop Category 1: L-Axis
+0
+5
+10
+15
+20
+25
+30
+0
+20
+40
+60
+80
+100
+120
+Stopping angle[deg]
+Speed[deg/s]
+Extension 100% 
+Load100%
+Load66%
+Load33%
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0
+20
+40
+60
+80
+100
+120
+Stopping time[sec]
+Speed[deg/s]
+Extension 100% 
+Load100%
+Load66%
+Load33%
+0
+5
+10
+15
+20
+25
+30
+35
+0
+50
+100
+150
+Stopping angle[deg]
+Speed[deg/s]
+Extension 66% 
+Load100%
+Load66%
+Load33%
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0
+50
+100
+150
+Stopping time[sec]
+Speed[deg/s]
+Extension 66% 
+Load100%
+Load66%
+Load33%
+0
+5
+10
+15
+20
+25
+30
+35
+0
+50
+100
+150
+Stopping angle[deg]
+Speed[deg/s]
+Extension 33% 
+Load100%
+Load66%
+Load33%
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0
+50
+100
+1
+50
+Stopping time[sec]
+Speed[deg/s]
+Extension 33% 
+Load100%
+Load66%
+Load33%
+35/64
+5
+Basic Specifications
+5.5
+Stopping Distance and Time for S-, L-, and U-Axes
+5-9
+HW1483896
+HW1483896
+5.5.4.4
+Stopping Distance and Time for Stop Category 1: U-Axis
+0
+5
+10
+15
+20
+25
+30
+35
+40
+0
+50
+100
+150
+200
+Stopping angle[deg]
+Speed[deg/s]
+Extension 100% 
+Load100%
+Load66%
+Load33%
+0.0
+0.1
+0.2
+0.3
+0.4
+0
+50
+100
+150
+200
+Stopping time[sec]
+Speed[deg/s]
+Extension 100% 
+Load100%
+Load66%
+Load33%
+36/64
+5
+Basic Specifications
+5.6
+Alterable Operating Range
+5-10
+HW1483896
+HW1483896
+5.6
+Alterable Operating Range
+The operating range of the S-axis can be altered in accordance with the 
+operating conditions as shown in table 5-2  “S-Axis Operating Range” .  If 
+alteration is necessary, contact your YASKAWA representative in 
+advance.
+5.6.1
+Components for Altering Operating Range
+Prepare the components listed in fig. 5-7  “The Components of the S-Axis 
+Stopper and Stopper Mounting Position.” , when modifying the angle of S-
+axis.
+(1) Ring (HW1306534-1): 2 rings
+(2) Stopper (HW1306535-1): 1 stopper
+(3) Stopper (HW1306535-2): 1 stopper
+(4) Hexagon socket head cap screw M5 (length: 20 mm): 4 screws
+(Tensile strength: 1200 N/mm2 or more)
+(5) Hexagon socket head cap screw M5 (length: 14 mm): 6 screws 
+(Tensile strength: 1200 N/mm2 or more)
+(6) Conical spring washer M5: 10 washers
+Table 5-2: S-Axis Operating Range
+Item
+Specifications
+S-Axis Operating Range
+-180° - +180° (standard)
+-165° - +165°
+-150° - +150°
+-135° - +135°
+-120° - +120°
+-105° - +105°
+-90° - +90°
+-75° - +75°
+-60° - +60°
+-45° - +45°
+-30° - +30°
+-15° - +15°
+-0° - +0°
+37/64
+5
+Basic Specifications
+5.6
+Alterable Operating Range
+5-11
+HW1483896
+HW1483896
+Fig. 5-7: The Components of the S-Axis Stopper and Stopper Mounting 
+Position.
+Hexagon socket head cap screw M5 
+(length: 20 mm) (4 screws)
+(Tensile strength: 1200 N/mm2 or more)
+Conical spring washer 2L-5 (4 washers)
+(Tightening torque: 6 N•m (0.6 kgf•m))
+Hexagon socket head cap screw M5 
+(length: 14 mm) (6 screws)
+(Tensile strength: 1200 N/mm2 or more)
+Conical spring washer 2L-5 (6 washers)
+(Tightening torque: 6 N•m (0.6 kgf•m))
+HW1306535-2 (Stopper)
+HW1306534-1(Ring) (two rings)
+HW1306535-1 (Stopper)
+A
+A
+Section  A-A  Stopper Mouting Position
+-165° - +165°
+-150° - +150°
+-135° - +135°
+-120° - +120°
+-105° - +105°
+-90° - +90°
+-75° - +75°
+-60° - +60°
+-45° - +45°
+-30° - +30°
+-15° - +15°
+0
+S-axis Operating 
+Range
+Stopper 
+position
+a
+b
+c
+c
+d
+d
+e
+e
+f
+f
+g
+g
+h
+h
+i
+i
+b
+j
+k
+l
+l
+k
+j
+53°
+15°
+15°
+15°
+15°
+15°
+15°
+15°
+15°
+15°
+15°
+15°
+15°
+15°
+15°
+67°
+15°
+15°
+a
+b
+c
+d
+e
+f
+g
+i
+j
+k
+l
+h
+38/64
+5
+Basic Specifications
+5.6
+Alterable Operating Range
+5-12
+HW1483896
+HW1483896
+5.6.2
+Notes on the Mechanical Stopper Installation
+When mounting the S-axis mechanical stopper, as shown in fig. 5-7  “The 
+Components of the S-Axis Stopper and Stopper Mounting Position.” , 
+mount the HW136534-1 (two rings) with six hexagon socket head cap 
+screws M5 (length: 14 mm) (two screws) (three places) with using the 
+tightening torque 6 Nm (tensile strength: 1200 N/mm2 or more), mount 
+the HW1306535-1 and HW1306535-2 (two stoppers) with four hexagon 
+socket head cap screws M5 (length: 20 mm) (two screws) 
+(two places) with using the tightening torque 6 Nm (tensile strength: 
+1200 N/mm2 or more) to the base.
+When the motion range is ±180° (standard), mounting the stopper is not 
+required.
+S-axis mechanical stopper can be set at 15° pitch intervals from ± 0° to 
+165° range.
+For the settable angles, refer to table 5-3  “The Settable Angle for S-Axis 
+Stopper” .
+5.6.3
+Adjustment to the Pulse Limitation of S-Axis
+Apply the Instruction for “Chap.8.17 Changing the Parameter Setting” in 
+“YRC1000 INSTRUCTIONS (RE-CTO-A221)” as part of reference 
+materials for adjusting the programming pendant when modifying the 
+range of motion of S-Axis.
+The limitation to the pulse (Pulse Soft Limit + 1st Axis) : SICxG800
+The limitation to the pulse (Pulse Soft Limit - 1st Axis) : SICxG810
+NOTE
+1. Use the specified bolts when mounting the S-Axis 
+mechanical stopper.
+2. Turn OFF the electric power supply before mounting.
+Degree
+±0°
+±15°
+±30°
+±45°
+±60°
+±75°
+±90°
+Number of Pulse
+±0
+±40070
+±80139
+±120209
+±160279
+±200348
+±240418
+Degree
+±105°
+±120°
+±135°
+±150°
+±165°
+±180°
+Number of Pulse
+±280487
+±320557
+±360627
+±400696
+±440766
+±480835
+NOTE
+When modifying the range of motion for machinery, adjust 
+both of the pulse limitation and the angle of S-Axis 
+mechanical stopper.
+39/64
+5
+Basic Specifications
+5.6
+Alterable Operating Range
+5-13
+HW1483896
+HW1483896
+The settable angles for S-axis stopper are shown in table 5-3  “The 
+Settable Angle for S-Axis Stopper” . 
+Table 5-3: The Settable Angle for S-Axis Stopper
+…Settable angle
+…Non settable angle
+"Table 5-3 The Settable Angle for S-Axis Stopper" indicates the angle range  which 
+allows S-axis to be set for + direction and - direction angles.
+The Angle of S-Axis Stopper for + Direction
+The Angle of S-Axis Stopper for - Direction
+-180°-165°-150°-135°-120°-105° -90° -75° -60° -45° -30°
+0°
+-15°
+-180°
+-165°
+-150°
+-135°
+-120°
+-90°
+-75°
+-60°
+-45°
+-30°
+-15°
+-180°
+-165°
+-150°
+-135°
+-120°
+-105°
+-90°
+-75°
+-60°
+-45°
+-30°
+-15°
+0°
+15°
+30°
+45°
+60°
+75°
+90°
+105°
+120°
+135°
+150°
+165°
+180°
+-105°
+40/64
+6
+Allowable Load for Wrist Axis and Wrist Flange
+6.1
+Allowable Wrist Load
+6-1
+HW1483896
+HW1483896
+6
+Allowable Load for Wrist Axis and Wrist Flange
+6.1
+Allowable Wrist Load
+The allowable payload of the wrist axis is 10 kg.  However, the 
+requirements listed in table 6-1  “Allowable Wrist Load”  must be satisfied 
+regarding the moment and the inertia. 
+Even if the load is not applied as mass but applied as force, the values in 
+table 6-1 must not be exceeded. 
+When the volume of the load is relatively small, refer to the moment arm 
+rating (LB, LT) shown in fig. 6-1  “Moment Arm Rating” . 
+Each value of the allowable inertia above is calculated assuming that the 
+moment load is at the maximum.  Thus, in the case when only the inertia 
+load is applied, when the moment load is small while the inertia load is 
+large, or when the load is not applied as mass but applied as force, etc., 
+contact your YASKAWA representative in advance.
+Fig. 6-1: Moment Arm Rating
+Table 6-1: Allowable Wrist Load
+Axis
+Allowable moment
+N•m (kgf•m)1)
+1 ( ): Gravitational unit
+Allowable inertia (GD2/4) 
+kg•m2
+R-Axis
+B-Axis
+T-Axis
+27.4 (2.8)
+27.4 (2.8)
+9.8 (1.0)
+0.78
+0.78
+0.1
+LB
+162
+LT
+0
+100
+200
+300
+400
+LB
+100
+120
+141
+10kg
+7kg
+5kg
+LT
+41/64
+6
+Allowable Load for Wrist Axis and Wrist Flange
+6.2
+Wrist Flange
+6-2
+HW1483896
+HW1483896
+6.2
+Wrist Flange
+The wrist flange dimensions are shown in fig. 6-2  “Wrist Flange” .  
+It is recommended that the attachment be mounted inside the fitting in 
+order to identify the alignment marks.  Fitting depth shall be 6 mm or less.
+Fig. 6-2: Wrist Flange
+6 (fitting depth) 
+PCD63
+34±0.1
+45°
+Tapped hole M6 (4 places) 
+(depth: 10 mm) (pitch: 1.0)
++ 0.012
+   0
+6 dia.
+(depth: 6 mm)
+    0
+   -0.046
+80 dia.
+42/64
+7
+System Application
+7.1
+Internal User I/O Wiring Harness and Air Lines
+7-1
+HW1483896
+HW1483896
+7
+System Application
+7.1
+Internal User I/O Wiring Harness and Air Lines
+Internal user I/O wiring harness (8 wires :0.2 mm2, 8 wires :0.3 mm2) and 
+two air lines are incorporated in the manipulator for the drive of the 
+peripheral devices mounted on the upper arm as shown in fig. 7-1  
+“Connectors for Internal User I/O Wiring Harness and Air Line (Standard 
+specifications)” . 
+The connector pins 1 to 16 are assigned as shown in fig. 7-2  “Details of 
+the Connector Pin Numbers (Standard Specifications)” .  Wiring must be 
+performed by users. conditions below:
+Fig. 7-1: Connectors for Internal User I/O Wiring Harness and Air Line 
+(Standard specifications)
+The allowable current for internal user 
+I/O wiring harness
+2.5 A or less for each wire
+(The total current value for pins 1 to 
+16 must be 40 A or less.)
+The maximum pressure for the air line  490 kPa (5 kgf/cm2) or less
+(The air hose inside diameter: 2.5 mm)
+Air inlet 2
+Tapped hole M5
+ (pitch: 0.8)
+with pipe plug
+Air inlet 1
+Tapped hole M5 
+(pitch: 0.8)
+with pipe plug
+Connector for internal user I/O wiring harness:
+RM21WTR-20P
+Prepare the connector RM21WTP-20S*HIROSE*.
+Details of B
+A
+B
+43/64
+7
+System Application
+7.1
+Internal User I/O Wiring Harness and Air Lines
+7-2
+HW1483896
+HW1483896
+Fig. 7-2: Details of the Connector Pin Numbers (Standard Specifications)
+Fig. 7-3: Connectors for Internal User I/O Wiring Harness and Air Line 
+(When From the Bottom of the Manipulator Base)
+5
+6
+2
+3
+4
+1
+12
+11
+14
+15
+13
+16
+7
+8
+9
+10
+0.2 mm2
+8 systems
+0.3 mm2
+8 systems
+Pins used
+S
+2
+3
+4
+5
+20
+1
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+19
+18
+AIR1 (red)
+AIR2 (blue)
+C
+2 Air lines (4: outside dia.)
+Air inlet 2
+Tapped hole M5
+ (pitch: 0.8)
+with pipe plug
+Air inlet 1
+Tapped hole M5
+ (pitch: 0.8)
+with pipe plug
+Connector for internal user I/O wiring harness:
+RM21WTR-20P
+Prepare the connector RM21WTP-20S*HIROSE*.
+1BC
+Details of A
+View B
+Details of C
+Internal user I/O wiring harness (9: outside dia.)
+Internal user I/O wiring harness (6.6: outside dia.)
+B
+A
+44/64
+7
+System Application
+7.1
+Internal User I/O Wiring Harness and Air Lines
+7-3
+HW1483896
+HW1483896
+Fig. 7-4: Details of the Connector Pin Numbers (When From the Bottom of 
+the Manipulator Base)
+5
+6
+2
+3
+4
+1
+12
+11
+14
+15
+13
+16
+7
+8
+9
+10
+0.2 mm2
+8 systems
+0.3 mm2
+8 systems
+Pins used
+S
+2
+3
+4
+5
+20
+1
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+19
+18
+45/64
+7
+System Application
+7.2
+Soft Cover for Covering the Manipulator (Optional)
+7-4
+HW1483896
+HW1483896
+7.2
+Soft Cover for Covering the Manipulator (Optional)
+The soft cover for covering the manipulator is optional.
+For the mounting position of the soft cover, refer to fig. 7-5  “Mounting 
+Position of the Soft Cover” .
+
+Notes when mounting the soft cover
+Mount the soft cover properly by following the notes below to avoid it from 
+being damaged (wear) or coming off.
+• Mount the soft cover correctly so that the corner deviation may not 
+occur. 
+• The soft cover is made of elastic material.  Be careful not to strain 
+excessively.
+• Do not cover the entire joint part for preventing interference.
+Fig. 7-5: Mounting Position of the Soft Cover
+
+Notes when using a soft cover
+When the soft cover is mounted, the temperature of the manipulator’s 
+components rises easily.  Therefore, the limitation of the ambient 
+temperature for installation is set below the standard temperature for the 
+purpose of protecting the manipulator.
+Standard
+0 - 40°C
+When mounting the soft cover
+0 - 35°C
+HW1200602-1(Casing soft cover)
+HW1200601-1(L-arm soft cover)
+Joint part which needs 
+special attention 
+to avoid interferences or 
+gap at each edge 
+when mounting the soft cover
+(Example- L-axis)
+HW1200603-1(U-arm soft cover)
+HW1200604-1(Wrist soft cover)
+HW1200600-1(S-head soft cover)
+46/64
+8
+Electrical Equipment Specification
+8.1
+Position of Servo ON Lamp
+8-1
+HW1483896
+HW1483896
+8
+Electrical Equipment Specification
+8.1
+Position of Servo ON Lamp
+Servo ON lamp is an optional.  For its location, refer to fig. 8-1  “Servo ON 
+Lamp” .
+Fig. 8-1: Servo ON Lamp 
+Servo ON lamp
+(optional)
+47/64
+8
+Electrical Equipment Specification
+8.2
+Internal Connections
+8-2
+HW1483896
+HW1483896
+8.2
+Internal Connections
+High reliability connectors are equipped on each connection part of the 
+manipulator to enable easy removal and installation for maintenance and 
+inspection.  For the number and location of connectors, see fig. 8-2  
+“Locations and Numbers of Connectors” .
+Diagrams for internal connections of the manipulator and the YRC1000 
+are shown in fig. 8-3(a)  “Internal Connection Diagram for YRC1000” , 
+fig. 8-3(b)  “Internal Connection Diagram for YRC1000” .
+Fig. 8-2: Locations and Numbers of Connectors
+Table 8-1: List of Connector Types
+Name
+Type of Connector
+Connector for Internal User I/O 
+Wiring Harness on the connector 
+base
+RM21WTR-20P
+(RM21WTP-20S*HIROSE*: Optional)
+S1(for internal user 
+I/O wiring harness)
+48/64
+8 Electrical Equipment Specification
+8.1 Internal Connections
+8-3
+HW1483896
+HW1483896
+Fig. 8-3(a): Internal Connection Diagram for YRC1000
+ME1
+MW1
+MV1
+MU1
+CN9
+BB1
+BA1
+ME2
+MW2
+MV2
+MU2
+L-AXIS
+CN1-1
+CN1-2
+CN1-3
+CN1-4
+CN1-5
+CN1-6
+MU1
+ME1
+MV1
+MW1
+ME2
+CN1-7
+CN1-8
+CN1-9
+CN1-10
+CN1-11
+CN1-12
+MV2
+MU2
+MW2
+CN1-13
+CN1-14
+CN1-15
+CN1-16
+MU3
+ME3
+MW3
+MV3
+CN2-1
+CN2-2
+CN2-3
+CN2-4
+CN2-5
+CN2-6
+ME5
+ME4
+MU4
+MV4
+MW4
+MU5
+CN2-7
+CN2-8
+CN2-9
+CN2-10
+CN2-11
+CN2-12
+MW5
+MV5
+ME6
+MU6
+MV6
+CN2-13
+CN2-14
+CN2-15
+CN2-16
+MW6
+CN4-1
+CN4-2
+CN4-3
+CN4-4
+CN4-5
+CN4-6
+BA1
+BB1
+BA2
+BA3
+BB3
+CN4-7
+CN4-8
+CN4-9
+CN4-10
+CN4-11
+CN4-12
+BA4
+BB4
+BA5
+BA6
+CN4-13
+CN4-14
+CN4-15
+CN4-16
+CN3-1
+CN3-2
+CN3-3
+CN3-4
+CN3-5
+CN3-6
+DATA+
+DATA-
++24V(OT1-1+)
+LB1
++24V(OT1-2+)
+CN3-7
+CN3-8
+CN3-9
+CN3-10
+CN3-11
+CN3-12
++24V
+LD1
+0V
+BC2(LAMP-)
+CN3-13
+CN3-14
+1
+SigOUT+
+4
+SigOUT-
+CN2
+6
+3
+PG0V
+PG5V
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+IN
+6
++24V
+3
++0V
+CN1
+8
+9
+SigIN+
+SigIN-
+-8
+-9
+SigIN-
+SigIN+
+SIG shield
+YRC1000
+ME3
+MW3
+MV3
+MU3
+U-AXIS
+ME4
+MW4
+MV4
+MU4
+R-AXIS
+ME5
+MW5
+MV5
+MU5
+B-AXIS
+ME6
+MW6
+MV6
+MU6
+T-AXIS
+Base
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+1S
+S-AXIS
+-8
+-9
+SigIN-
+SigIN+
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+OUT
+-8
+-9
+SigIN-
+SigIN+
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+2S
+-8
+-9
+SigIN-
+SigIN+
+CN5
+2
+1
+BAT3.6V
+BAT0V
+K
+R
+FG
+CN1-1
+CN1-2
+CN1-3
+CN1-4
+CN1-5
+CN1-6
+CN1-7
+CN1-8
+CN1-9
+CN1-10
+CN1-11
+CN1-12
+CN1-13
+CN1-14
+CN1-15
+CN1-16
+CN2-1
+CN2-2
+CN2-3
+CN2-4
+CN2-5
+CN2-6
+CN2-7
+CN2-8
+CN2-9
+CN2-10
+CN2-11
+CN2-12
+CN2-13
+CN2-14
+CN2-15
+CN2-16
+CN4-1
+CN4-2
+CN4-3
+CN4-4
+CN4-5
+CN4-6
+CN4-7
+CN4-8
+CN4-9
+CN4-10
+CN4-11
+CN4-12
+CN4-13
+CN4-14
+CN4-15
+CN4-16
+CN3-1
+CN3-2
+CN3-3
+CN3-4
+CN3-5
+CN3-6
+CN3-7
+CN3-8
+CN3-9
+CN3-10
+CN3-11
+CN3-12
+CN3-13
+CN3-14
+SIG shield
+BB2
+BA2
+CN11
+CN13
+BB3
+BA3
+CN15
+BB4
+BA4
+CN18
+BB5
+BA5
+CN21
+BB6
+BA6
+L-AXIS
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+IN
+-8
+-9
+SigIN-
+SigIN+
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+1S
+U-AXIS
+-8
+-9
+SigIN-
+SigIN+
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+OUT
+-8
+-9
+SigIN-
+SigIN+
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+2S
+-8
+-9
+SigIN-
+SigIN+
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+IN
+SigIN-
+SigIN+
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+1S
+B-AXIS
+-8
+-9
+SigIN-
+SigIN+
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+OUT
+SigIN-
+SigIN+
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+PG0V
+BAT5V
+SigOUT-
+PG5V
+BAT0V
+SigOUT+
+FG
+2S
+-8
+-9
+SigIN-
+SigIN+
+T-AXIS
++24V(LAMP+)
+-1
+-4
+-3
+-2
+ME5
+MW5
+MV5
+MU5
+CN16
+BA5
+-1
+-5
+ME6
+MW6
+MV6
+MU6
+BB6
+BA6
+-2
+-5
+-4
+-3
+-6
+7
+FG
+7
+FG
+(E)
+(D)
+(A)
+(B)
+ME5
+MW5
+MV5
+MU5
+CN17
+BB5
+BA5
+MW3
+MV3
+MU3
+ME4
+MW4
+MV4
+MU4
+CN12
+BB3
+BA3
+CN14
+BB4
+BA4
+ME1
+MW1
+MV1
+MU1
+CN8
+BB1
+BA1
+ME2
+MW2
+MV2
+MU2
+BB2
+BA2
+CN10
+ME6
+MW6
+MV6
+MU6
+CN20
+BB6
+BA6
+CN19
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+-8
+-9
+-1
+-6
+-5
+-4
+-3
+-2
+-7
+-8
+-9
+-1
+-9
+-7
+-3
+-4
+-2
+ME3
+-1
+-9
+-7
+-3
+-4
+-2
+-1
+-9
+-7
+-3
+-4
+-2
+-4
+-1
+-2
+-3
+-6
+-5
+-1
+-9
+-7
+-3
+-4
+-2
+-1
+-9
+-7
+-3
+-4
+-2
+-1
+-9
+-7
+-3
+-4
+-2
+-4
+-1
+-2
+-3
+-6
+-5
+-4
+-1
+-2
+-3
+-6
+-5
+-4
+-1
+-2
+-3
+-6
+-5
+-4
+-1
+-2
+-3
+-6
+-5
+-4
+-1
+-2
+-3
+-6
+-5
+1BC
+CN6
+2
+1
+BAT3.6V
+BAT0V
+K
+R
+CN7
+2
+1
+BAT3.6V
+BAT0V
+K
+R
+(C)
+R-AXIS
+S-AXIS
+PW
+PW
+DC/DC
+PW
+PW
+PW
+PW
+E 
+E
+E
+YB
+PG
+PG
+PG
+PG
+PG
+PG
+E 
+E 
+YB
+YB
+YB
+YB
+YB
+E 
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+49/64
+8 Electrical Equipment Specification
+8.1 Internal Connections
+8-4
+HW1483896
+HW1483896
+Fig. 8-3(b): Internal Connection Diagram for YRC1000
+Air1
+1
+2
+3
+4
+5
+6
+1
+2
+3
+4
+S
+PE
+Air1
+Air2
+Air2
+7
+8
+11
+12
+13
+14
+15
+16
+5
+6
+7
+8
+9
+10
+Vcc1
+GND1
+DATA+1
+DATA-1
+SG1
+Vcc2
+GND2
+DATA+2
+DATA-2
+SG2
+LAMP
+1
+2
+3
+4
+A
+B
+C
+D
+SW1+
+SW1-
+SW2-
+SW2+
+0V
++24V
+0V
++24V
+CN72
+SW2-
+SW1-
+SW1+
++24V
+SW2+
+-1
+-4
+-2
+-5
+-3
+0V
+-6
+0V
++24V
+-1
+-2
+X1
+X2
+SW
+11
+14
+21
+24
+X1
+X2
+11
+12
+FG1
+FG2
+CN32
+-1
+-4
+-2
+CN30
+-5
+-3
+-1
+-4
+-2
+CN36
+-5
+-3
+-1
+-4
+-2
+CN34
+-5
+-3
+-6
+-6
+-6
+FOR LAMP(OPTION)
+-1
+-3
+-2
+-1
+-4
+-3
+-2
+-1
+-3
+-2
+CN78
+-4
+-1
+-2
+SW1+
+SW1-
+SW2-
+SW2+
+0V
++24V
+0V
++24V
+-3
+-5
+-4
+-1
+-6
+-2
+CN70
+1
+2
+3
+4
+6
+7
+8
+9
+12
+13
+14
+15
+E1
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET1
+VDET2
+VDET2
+1
+7
+3
+4
+5
+6
+9
+10
+1
+2
+3
+4
+A
+B
+C
+D
+11
+12
+2
+8
+3
+GND_CH1
+4
+VDET1
+CN4
+1
+2
+GND_CH1
+5V_CH1
+5
+GND_CH2
+6
+VDET2
+2
++24V
+4
+0V
+CN3
+1
+3
++24V
+0V
+7
+8
+GND_CH2
+5V_CH2
+-5
+-6
+9
+10
+CN76
+CN77
+-5
+10
+-6
+11
+-4
+S-1
+CN71
+CN73
+L-Axis
+-1
+-4
+-2
+-5
+-3
+-6
+-7
+CN33
+-1
+-4
+-2
+CN31
+-5
+-3
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-1
+-4
+-2
+-5
+-3
+-6
+Torque
+Sensor
+-1
+-4
+-2
+CN37
+-5
+-3
+-1
+-4
+-2
+CN35
+-5
+-3
+-6
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-7
+CN50
+-1
+-4
+-2
+CN48
+-5
+-3
+-1
+-4
+-2
+CN54
+-5
+-3
+-1
+-4
+-2
+CN52
+-5
+-3
+-6
+-6
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET1
+VDET2
+VDET2
+R-Axis
+-1
+-4
+-2
+-5
+-3
+-6
+-7
+CN51
+-1
+-4
+-2
+CN49
+-5
+-3
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-1
+-4
+-2
+-5
+-3
+-6
+Torque
+Sensor
+-1
+-4
+-2
+CN55
+-5
+-3
+-1
+-4
+-2
+CN53
+-5
+-3
+-6
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-7
+-1
+-2
+-3
+-5
+-4
+-1
+-6
+-2
+CN46
+-3
+-4
+-5
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+CN47
+CN40
+-1
+-4
+-2
+CN38
+-5
+-3
+-1
+-4
+-2
+CN44
+-5
+-3
+-1
+-4
+-2
+CN42
+-5
+-3
+-6
+-6
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET1
+VDET2
+VDET2
+U-Axis
+-1
+-4
+-2
+-5
+-3
+-6
+-7
+CN41
+-1
+-4
+-2
+CN39
+-5
+-3
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-1
+-4
+-2
+-5
+-3
+-6
+Torque
+Sensor
+-1
+-4
+-2
+CN45
+-5
+-3
+-1
+-4
+-2
+CN43
+-5
+-3
+-6
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-7
+CN58
+-1
+-4
+-2
+CN56
+-5
+-3
+CN62
+CN60
+Micro
+Computer
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET1
+VDET2
+VDET2
+B-Axis
+-1
+-4
+-2
+-5
+-3
+-6
+-7
+CN59
+-1
+-4
+-2
+CN57
+-5
+-3
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-1
+-4
+-2
+-5
+-3
+-6
+Torque
+Sensor
+-1
+-4
+-2
+CN63
+-5
+-3
+-1
+-4
+CN61
+-5
+-3
+-6
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-7
+CN66
+-1
+-4
+-2
+CN64
+-5
+-3
+-1
+-4
+-2
+CN69
+-5
+-3
+-1
+-4
+-2
+CN68
+-5
+-3
+-6
+-6
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET1
+VDET2
+VDET2
+T-Axis
+-1
+-4
+-2
+-5
+-3
+-6
+-7
+CN67
+-1
+-4
+-2
+CN65
+-5
+-3
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-1
+-4
+-2
+-5
+-3
+-6
+Torque
+Sensor
+Terminator
+Terminator
+CN24
+-1
+-4
+-2
+CN22
+-5
+-3
+-1
+-4
+-2
+CN28
+-5
+-3
+-1
+-4
+-2
+CN26
+-5
+-3
+-6
+-6
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET1
+VDET2
+VDET2
+S-Axis
+-1
+-4
+-2
+-5
+-3
+-6
+-7
+CN25
+-1
+-4
+-2
+CN23
+-5
+-3
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-1
+-4
+-2
+-5
+-3
+-6
+Torque
+Sensor
+-1
+-4
+-2
+CN29
+-5
+-3
+-1
+-4
+-2
+CN27
+-5
+-3
+-6
+-6
+DATA-1
+GND1
+Vcc1
+SG1
+DATA+1
+DATA-2
+GND2
+Vcc2
+SG2
+DATA+2
+VDET1
+VDET2
+-7
+SW
+TQ
+-1
+-3
+-2
+-4
+-1
+-3
+-2
+CN75
+1
+2
+3
+4
+9
+10
+11
+12
+13
+14
+-6
+-5
+5
+-6
+6
+-7
+-8
+-7
+-8
+15
+7
+16
+8
+-5
+-4
+-1
+-4
+-2
+-5
+-3
+-6
+-1
+-4
+-2
+-5
+-3
+-6
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+CH1
+CH2
+Micro
+Computer
+Micro
+Computer
+Micro
+Computer
+CH1
+CH2
+-2
+CH1
+CH2
+CH1
+CH2
+-7
+FG2
+-7
+FG1
+CN74
+S-2
+CH1
+CH2
+CH1
+CH2
+-5
+5
+E2
+-7
+U-arm
+Casing
+Spacer(T-axis)
+L-arm
+-1
+-3
+-2
+-1
+-3
+-2
+CN80
+-4
+-5
+-6
+CN79
+-5
+-6
+-4
+-7
+-8
+-7
+-8
+S-head
+Wrist
+16
+DC/DC
+E 
+E 
+E 
+E 
+E 
+E 
+E 
+E 
+E 
+E 
+E 
+E 
+E 
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+50/64
+9
+Maintenance and Inspection
+9.1
+Inspection Schedule
+9-1
+HW1483896
+HW1483896
+9
+Maintenance and Inspection
+9.1
+Inspection Schedule
+Proper inspections are essential not only to assure that the mechanism 
+will be able to function for a long period, but also to prevent malfunctions 
+and assure safe operation.  Inspection intervals are classified into six 
+levels as shown in table 9-1  “Inspection Items” .
+In table 9-1, the inspection items are categorized by types of operations: 
+operations which can be performed by personnel authorized by the user, 
+operations to be performed by trained personnel, and operations to be 
+performed by service company personnel.  Only specified personnel shall 
+perform the inspection work.
+DANGER
+•
+Do not remove the motor, and do not release the brake.
+Failure to observe this caution may result in death or serious injury from 
+unexpected turning of the manipulator's arm. 
+WARNING
+•
+Maintenance and inspection must be performed by specified 
+personnel.
+Failure to observe this caution may result in electric shock or injury.
+•
+For disassembly or repair, contact your YASKAWA representative.
+•
+Before maintenance or inspection, be sure to turn the main power 
+supply OFF, and put up a warning sign.  (ex. DO NOT TURN THE 
+POWER ON.)
+Failure to observe this warning may result in electric shock or injury.
+NOTICE
+•
+The battery pack must be connected before removing detection 
+connector when maintenance and inspection.
+Failure to observe this caution may result in the loss of home position 
+data.
+NOTE
+• The inspection interval must be based on the servo power 
+supply on time.
+• The following inspection schedule is based on the case 
+where the manipulator is used for the cooperation with the 
+working people.  If the manipulator is used for other appli-
+cation or if it is used under special conditions, a case-by-
+case examination is required. 
+The inspection may be conducted at shorter intervals if the 
+manipulator is used very frequently for the application 
+such as handling, in this case, contact your YASKAWA 
+representative.
+51/64
+9
+Maintenance and Inspection
+9.1
+Inspection Schedule
+9-2
+HW1483896
+HW1483896
+Table 9-1: Inspection Items
+Items1)
+Schedule
+Method
+Operation
+Inspection 
+Charge
+Daily
+1000HCycle
+6000HCycle
+12000HCycle
+24000H
+36000H
+Specified 
+Personnel
+Licensee
+Service 
+Company
+1
+Alignment mark
+•
+Visual
+Check alignment mark accordance at the home position.
+Check for damage.
+Or check the position deviation at the check point.
+•
+• •
+2
+External lead wire
+•
+Visual
+Check for damage and deterioration.
+•
+• •
+3
+Working area and
+manipulator
+•
+Visual
+Clean the work area if dust or spatter is present. Clean the 
+seeped oil or etc.2)
+Check for damage and outside cracks.
+•
+• •
+4
+Baseplate mounting bolts
+•
+Spanner 
+Wrench
+Tighten loose bolts.
+Replace if necessary.
+•
+• •
+5
+External cover mounting 
+screws
+•
+Screwdriver, 
+Wrench
+Tighten loose bolts.  
+Replace if necessary.
+•
+• •
+6
+Connector of manipulator cable
+•
+Manual
+Check for loose connectors.
+•
+• •
+7
+Connector base unit
+(including the lead wire for the 
+basic axis)
+(including the power board)
+•
+Manual
+Visual
+Check for the communication error.  (Check the cable by shaking 
+the wire manually.)
+Check for the cable condition.  (Replace the cable if abnormal 
+abrasion occurs.)
+• •
+•
+Replace3)
+• •
+8
+Internal wiring harness
+(Lead wire for the wrist axis)
+•
+Visual
+Check for the cable condition.  (Replace the cable if abnormal 
+abrasion occurs.)
+• •
+•
+Replace3)
+• •
+9
+Battery pack in manipulator
+•
+Replace the battery pack when the battery alarm occurs or the 
+manipulator drove for 24000H.
+• •
+10
+S-, L-, U-, R-, B-, T-axes gears
+• •
+Grease gun
+Check for malfunction.  (Replace if necessary.) 
+Supply grease4)(12000H cycle). 
+• •
+11
+Overhaul
+•
+•
+52/64
+9
+Maintenance and Inspection
+9.1
+Inspection Schedule
+9-3
+HW1483896
+HW1483896
+The numbers in the above table correspond to the numbers in table 9-1  “Inspection Items” .
+1
+Inspection No. correspond to the numbers in fig. 9-1  “Inspection Items” 
+2
+Due to the operating conditions or the ambient environment, the oil may seep from the lip part of the oil seal and adhere to the outside of the lip part. 
+The seeped oil may accumulate and fall in drops depending on the operation.  Before the operation, clean the oil in the lower side of the oil seal of sliding parts to prevent
+the seeped oil from accumulating.  Frequent reverse motions or operations under a high-temperature environment may lead to a high temperature of the motor and the
+oil may seep due to a rise in the internal pressure of the grease bath. 
+In that case, release the grease inlet immediately after completing the operation to lower the internal pressure. 
+(When releasing the grease inlet, ensure that grease does not scatter. )
+3
+Wire harness in manipulator to be replaced at 24000H inspection.
+4
+For grease to be used for each part, refer to table 9-2  “Inspection Parts and Grease Used” .
+Table 9-2: Inspection Parts and Grease Used 
+No. 
+Notes on Maintenance Procedures
+9-5
+HW1483896
+HW1483896
+9.2
+Notes on Maintenance Procedures
+9.2.1
+Battery Pack Replacement
+Each of the three battery packs are located in the positions shown in 
+fig. 9-2  “Locations of the Battery and Multi-port Connector”  with the multi-
+port connector connectors. 
+When the battery alarm message is shown on the programming pendant, 
+replace the battery pack in accordance with the following two methods. 
+Perform the replacement by referring to chapter 9.4  “Notes for 
+Maintenance” .
+Fig. 9-2: Locations of the Battery and Multi-port Connector 
+Cover
+Multi port
+Battery pack for S-,L-axes
+Cable tie
+Cross recessed truss 
+head captive screw M4 
+(length: 10 mm) (6 screws)
+Nickel plating
+Cross recessed truss 
+head captive screw M4 
+(length: 10 mm) (4 screws)
+Nickel plating
+Battery pack for B-,T-axes
+Battery pack for U-, R-axes
+Cable tie
+Multi port
+Cable tie
+Multi port
+Cover
+Lamp (For collaborative operation)
+Switch (For restarting operation)
+Servo ON lamp
+* optional
+Cross recessed truss 
+head captive screw M4 
+(length: 10 mm) (6 screws)
+Nickel plating
+Cover
+55/64
+9
+Maintenance and Inspection
+9.2
+Notes on Maintenance Procedures
+9-6
+HW1483896
+HW1483896
+
+Normal (The control power supply of the YRC1000 can be turned ON)
+Fig. 9-3: Battery connection (the control power supply of the YRC1000 
+can be turned ON)
+1. Turn ON the power supply of the YRC1000 and turn OFF the servo 
+power.
+2. Loosen the cover mounting bolt and remove the cover.
+3. The old battery pack is fixed with the cable tie. Cut the cable tie to 
+remove the old battery pack.
+4. Remove the old battery pack from the multi-port connector and mount 
+the new battery pack.
+5. Fix the new battery pack with the cable tie T18L.
+6. Tighten the cover mounting bolt by using the tightening torque shown 
+in fig. 9-2  “Locations of the Battery and Multi-port Connector” to 
+reinstall the cover.
+DANGER
+•
+Make sure to perform the battery replacement with the emergency 
+stop button being pressed.
+Failure to observe this instruction may cause improper movement of 
+the manipulator which may result in personal injury and/or equipment 
+damage. 
+NOTE
+When reinstalling the cover, be careful not to get caught the 
+cable.
+(HW1483880-A)
+Multi-port connector
+Connector
+Old battery pack
+New battery pack
+56/64
+9
+Maintenance and Inspection
+9.2
+Notes on Maintenance Procedures
+9-7
+HW1483896
+HW1483896
+
+When the control power supply of the YRC1000 cannot be turned ON
+Fig. 9-4: Battery connection (the control power supply of the YRC1000 
+cannot be turned ON)
+1. Prepare the lead for battery replacement (HW1471281-A) and the 
+battery pack for backup. (Apart from the new battery pack for 
+replacement, prepare the battery pack for backup)
+2. Loosen the cover mounting bolt and remove the cover.
+3. Remove the connector from the “IN” port of the multi-port connector. 
+Connect the lead for battery replacement to the “IN” port of the multi-
+port connector.
+4. Connect the battery pack for backup to the lead for battery 
+replacement.
+5. The old battery pack is fixed with the cable tie.  Cut the cable tie to 
+remove the old battery pack.
+6. Remove the old battery pack from the multi-port connector and mount 
+the new battery pack.
+7. Fix the new battery pack with the cable tie T18L.
+8. Remove the lead for battery replacement and the battery pack for 
+backup from the multi-port connector, connect the connector which 
+has been removed in no.3 of this procedure to the “IN” connector 
+again.
+9. Tighten the cover mounting bolt by using the tightening torque shown 
+in fig. 9-2  “Locations of the Battery and Multi-port Connector” to 
+reinstall the cover.
+NOTE
+Before removing the old battery pack, make sure to connect 
+the battery pack for backup to prevent the encoder absolute 
+data from disappearing.
+NOTE
+When reinstalling the cover, be careful not to get caught the 
+cable.
+(HW1483880-A)
+IN
+(HW1483880-A)
+(HW1471281)
+Multi-port connector
+Connector
+Old battery pack
+Lead for battery replacement
+Battery pack for back-up
+New battery pack
+57/64
+9
+Maintenance and Inspection
+9.3
+Notes on Grease Replenishment Procedures
+9-8
+HW1483896
+HW1483896
+9.3
+Notes on Grease Replenishment Procedures
+Make sure to follow the instructions listed below at grease replenishment. 
+Failure to observe the following notes may result in damage to motor and 
+speed reducer.  
+NOTE
+• A injection syringe is one of recommended spare parts for 
+grease replenishment. Do not replenish grease by using 
+the grease pump.
+• Soften the grease in a injection syringe by stirring or etc., 
+and fill the necessary amount.
+• If the replenishment is performed more than the specified 
+numbers, the internal pressure may rise during the 
+operation and the grease leakage may occur. 
+• When filling, grease may flow from the inlet.
+Make sure to prepare a cloth or etc. to wipe off grease and 
+the container which receives grease.
+58/64
+9
+Maintenance and Inspection
+9.3
+Notes on Grease Replenishment Procedures
+9-9
+HW1483896
+HW1483896
+9.3.1
+Grease Replenishment for Each Axis Gear
+Fig. 9-5: Each Axis Gear Diagram
+U-, R-axes
+S-,L-axes
+B-,T-axes
+Cover
+L-axis side
+S-axis side
+U-axis side
+R-axis side
+T-axis side
+B-axis side
+B-,T-axes
+Cover
+Cap
+Cap
+U-, R-axes
+S-,L-axes
+Cover
+Cap
+Cap
+Cap
+Cap
+59/64
+9
+Maintenance and Inspection
+9.3
+Notes on Grease Replenishment Procedures
+9-10
+HW1483896
+HW1483896
+9.3.1.1
+Grease Replenishment 
+(Refer to fig. 9-5  “Each Axis Gear Diagram” .)
+Replenish the grease in accordance with the following procedure:
+1. Adjust the posture of the manipulator to perform grease replenishment 
+smoothly.
+2. Remove the two caps from the grease inlets.
+3. Install the injection syringe for replenishment to the grease inlet.
+(The injection syringe is a recommended spare part.)
+4. Inject the grease through the grease inlet.
+– Grease type:
+Harmonic Grease SK-1A
+– Amount of grease: 
+S-, L-axes
+: 3 g 
+U-axis
+: 2 g
+R-, B- and T-axes : 1 g
+5. Remove the injection syringe for replenishment from the grease inlet. 
+Install the two caps to the grease inlets.
+60/64
+9
+Maintenance and Inspection
+9.4
+Notes for Maintenance
+9-11
+HW1483896
+HW1483896
+9.4
+Notes for Maintenance
+9.4.1
+Multi-Port Connector 
+Three multi-port connectors (refer to fig. 9-6  “Multi-Port Connector” ) for 
+the motor signals are mounted on each part of the manipulator.  (For the 
+locations, refer to fig. 9-2  “Locations of the Battery and Multi-port 
+Connector” )
+The multi-port connector has four ports: two for the motor and the other 
+two for the wire harness.(Refer to fig. 9-7  “Wiring of Multi-port Connector 
+Part” )
+When disconnecting the connector of the multi-port connector during the 
+battery replacement, be careful not to disconnect the connector between 
+the motor and the multi-port connector.  If the connector between the 
+motor and the multi-port connector is disconnected, the encoder absolute 
+data disappears.
+Fig. 9-6: Multi-Port Connector
+Fig. 9-7: Wiring of Multi-port Connector Part
+Motor 1
+Motor 2
+Wire harness “IN”
+Wire harness “OUT”
+Port designation 
+*For the multi-port connector for B-,T-axes, 
+the wire harness is not installed.
+Motor
+Wire Harness 
+Battery pack
+Multi-port connector
+61/64
+10
+Recommended Spare Parts
+10-1
+HW1483896
+HW1483896
+10
+Recommended Spare Parts
+It is recommended to keep the parts and components in the following table 
+in stock as spare parts for the MOTOMAN-GP8/AR700, -GP7/AR900.
+To purchase lead wires of the wire harness or etc., check the order/
+manufacture no. and contact YASKAWA representative.
+Product performance cannot be guaranteed when using spare parts from 
+any company other than YASKAWA.  The spare parts are ranked as 
+follows:
+• Rank A: Expendable and frequently replaced parts
+• Rank B: Parts for which replacement may be necessary as a result of 
+frequent operation
+• Rank C: Drive unit
+NOTE
+For replacing parts in rank B or rank C, contact your
+YASKAWA representative.
+Table 10-1: Spare Parts for the YR-1-06VXHC10-A00 (Sheet 1 of 2)
+Rank
+Parts 
+No.
+Name
+Type
+Manufacturer
+Qty
+Qty
+per
+Unit
+Remarks
+A
+1
+Grease
+Harmonic Grease
+SK-1A
+Harmonic Drive 
+Systems Co., Ltd.
+2.5 kg
+-
+A
+2
+Adhesive
+LOCTITE 518
+Henkel Japan Ltd
+-
+-
+A
+3
+Lead Wire for Battery 
+Replacement
+HW1471281-A
+YASKAWA Electric
+Corporation
+1
+-
+A
+4
+Battery Pack
+HW1483880-A
+YASKAWA Electric
+Corporation
+1
+3
+B
+5
+S- and L-axis unit
+HW1172956-A
+YASKAWA Electric
+Corporation
+1
+1
+B
+6
+U- and R-axis unit
+HW1172957-A
+YASKAWA Electric
+Corporation
+1
+1
+B
+7
+B- and T-axis unit
+HW1172958-A
+YASKAWA Electric
+Corporation
+1
+1
+B
+8
+Connector base unit
+HW1372979-A
+YASKAWA Electric
+Corporation
+1
+1
+Including 
+the 
+internal 
+wiring 
+harness 
+for the 
+basic axis
+B
+9
+Internal wiring 
+harness for the 
+wrist axis
+HW1173202-A
+YASKAWA Electric
+Corporation
+1
+1
+C
+10
+S-and L-Axes
+AC Servomotor
+SGM7J-04APK-YR1*
+YASKAWA Electric
+Corporation
+1
+2
+C
+11
+U-Axis
+AC Servomotor
+SGM7J-02APK-YR1*
+YASKAWA Electric
+Corporation
+1
+1
+62/64
+10
+Recommended Spare Parts
+10-2
+HW1483896
+HW1483896
+C
+12
+R-, B- and T-Axes
+AC Servomotor
+SGM7J-01APK-YR1*
+YASKAWA Electric
+Corporation
+1
+3
+C
+13
+Power Cable for S-, L- 
+and U-Axes AC 
+Servomotor
+HW1372681-A
+YASKAWA Electric
+Corporation
+1
+3
+C
+14
+Power Cable for R-, B- 
+and T-Axes AC 
+Servomotor
+HW1372679-A
+YASKAWA Electric
+Corporation
+1
+3
+C
+15
+S-axis torque sensor
+HW1385471-A
+YASKAWA Electric
+Corporation
+1
+1
+C
+16
+L-axis torque sensor
+HW1385471-B
+YASKAWA Electric
+Corporation
+1
+1
+C
+17
+U-axis torque sensor HW1385472-A
+YASKAWA Electric
+Corporation
+1
+1
+C
+18
+R-axis torque sensor HW1385473-A
+YASKAWA Electric
+Corporation
+1
+1
+C
+19
+B-axis torque sensor HW1385474-A
+YASKAWA Electric
+Corporation
+1
+1
+C
+20
+T-axis torque sensor
+HW1385474-B
+YASKAWA Electric
+Corporation
+1
+1
+C
+21
+Multi-Port Connector HW1384619-A
+YASKAWA Electric
+Corporation
+1
+3
+C
+22
+Power Supply Board
+HW1384624-A
+YASKAWA Electric
+Corporation
+1
+1
+C
+23
+Voltage conversion 
+board for the torque 
+sensor
+HW1385477-A
+YASKAWA Electric 
+Corporation
+1
+1
+B
+24
+Replacement Kit for 
+S-Axis Speed 
+Reducer
+Y005C-6VXHC10A00S YASKAWA Electric 
+Corporation
+1
+1
+B
+25
+Replacement Kit for 
+L-Axis Speed 
+Reducer
+Y005C-6VXHC10A00L
+YASKAWA Electric 
+Corporation
+1
+1
+B
+26
+Replacement Kit for 
+U-Axis Speed 
+Reducer
+Y005C-6VXHC10A00U YASKAWA Electric 
+Corporation
+1
+1
+B
+27
+Replacement Kit for 
+R-Axis Speed 
+Reducer
+Y005C-6VXHC10A00R YASKAWA Electric 
+Corporation
+1
+1
+B
+28
+Replacement Kit for 
+B-Axis Speed 
+Reducer
+Y005C-6VXHC10A00B YASKAWA Electric 
+Corporation
+1
+1
+B
+29
+Replacement Kit for 
+T-Axis Speed 
+Reducer
+Y005C-6VXHC10A00T
+YASKAWA Electric 
+Corporation
+1
+1
+Table 10-1: Spare Parts for the YR-1-06VXHC10-A00 (Sheet 2 of 2)
+Rank
+Parts 
+No.
+Name
+Type
+Manufacturer
+Qty
+Qty
+per
+Unit
+Remarks
+63/64
+HW1483896
+Printed in Japan May 2017 17-05
+C
+Specifications are subject to change without notice
+for ongoing product modifications and improvements.
+MANUAL NO.
+MOTOMAN-HC10
+INSTRUCTIONS
+HEAD OFFICE
+2-1 Kurosakishiroishi, Yahatanishi-ku, Kitakyushu 806-0004, Japan
+Phone   +81-93-645-7703
+Fax   +81-93-645-7802
+100 Automation Way, Miamisburg, OH 45342, U.S.A. 
+Phone   +1-937-847-6200
+Fax   +1-937-847-6277
+YASKAWA America Inc. (Motoman Robotics Division)
+Yaskawastrasse 1, 85391 Allershausen, Germany
+Phone   +49-8166-90-100
+Fax   +49-8166-90-103
+YASKAWA Europe GmbH
+Robotics Divsion )
+Phone   +82-2-784-7844
+Fax   +82-2-784-8495
+151 Lorong Chuan, #04-02A, New Tech Park, Singapore 556741
+Phone   +65-6282-3003
+Fax   +65-6289-3003
+YASKAWA Electric (Singapore) PTE Ltd.
+No7 Yongchang North Road, Beijing E&T Development AreaChina 100176
+Phone   +86-10-6788-2858
+Fax   +86-10-6788-2878
+YASKAWA SHOUGANG ROBOT Co. Ltd.
+#426, Udyog Vihar, Phase- IV,Gurgaon, Haryana, India
+Fax   +91-124-475-8542
+Phone   +91-124-475-8500
+YASKAWA  India Private Ltd. (Robotics Division)
+YASKAWA Electric (China) Co., Ltd.
+22F, One Corporate Avenue, No.222, Hubin Road, Huangpu District, Shanghai 200021, China
+Phone  +86-21-5385-2200          Fax  㸩86-21-5385-3299 
+YASKAWA Electric (Thailand) Co., Ltd.
+59,1st-5th Floor, Flourish Building, Soi Ratchadapisek 18,Ratchadapisek Road, 
+Huaykwang, Bangkok 10310, THAILAND
+Phone   +66-2-017-0099            Fax   +66-2-017-0199
+12F, No.207, Sec. 3, Beishin Rd., Shindian District, New Taipei City 23143, Taiwan
+Fax   +886-2-8913-1513
+Phone   +886-2-8913-1333
+YASKAWA  Electric Taiwan Corporation 
+Secure Building-Gedung B Lantai Dasar & Lantai 1 JI. Raya Protokol Halim Perdanakusuma, 
+Jakarta 13610, Indonesia
+Fax   +62-21-2982-6741
+Phone   +62-21-2982-6470
+PT. YASKAWA  Electric Indonesia 
+Phone   +46-480-417-800
+Fax   +46-486-414-10
+YASKAWA Nordic AB
+Verkstadsgatan 2, Box 504 ,SE-385 25 Torsas, Sweden
+35F, Three IFC, 10 Gukjegeumyung-ro, Yeongdeungpo-gu, Seoul, Korea　07326
+YASKAWA Electric Korea Corporation
+64/64
