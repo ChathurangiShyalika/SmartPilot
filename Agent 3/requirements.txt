@@ -7,3 +7,7 @@ rouge-score==0.1.2
 nltk==3.8.1
 requests==2.32.3
 BeautifulSoup4==4.12.3
+datasets
+evaluate
+transformers
+peft
