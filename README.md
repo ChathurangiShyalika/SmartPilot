@@ -26,40 +26,23 @@ Visit here for the demo: [Demo link](https://lnkd.in/eBJhiBDJ)
 | **Custom, Neurosymbolic, and Compact**| Describes methods focused on creating AI systems that are tailored to specific industry needs, use neurosymbolic reasoning for explainability, and are optimized for lightweight deployment. | SmartPilot is built as custom solutions tailored to manufacturing industry, using neurosymbolic reasoning for explainability, and optimized for lightweight deployment.  The copilot is custom-built to address specific industry needs, using neurosymbolic AI for enhanced reasoning and explanation. The system is compact, meaning it is lightweight and optimized for real-time use on consumer-grade hardware, aligning with the principles of being cost-effective and accessible for real-world applications.                                                    |
 
 
-## 📰 Slides
-
-## 💻 Preliminary Experiments - Neuro-Symbolic Question-Answer Knowledge Search System 
-
-This experiment implements a **Question-Answer Knowledge Search System** using **neuro-symbolic AI** principles. The system processes queries, retrieves relevant questions from a user-provided QA dataset, and generates a knowledge panel with extracted entities and relationships. The architecture effectively combines **neural network-based** language understanding and **symbolic reasoning** for precise query answering.
-
-### Key Features
-
-- **Neuro-Symbolic Design**: Combines the strengths of neural methods (deep learning models for sentence embeddings) with symbolic reasoning (knowledge graph-based similarity).
-- **User-Customizable**: The system dynamically adapts to the user's **QA dataset** in JSON format and extracts insights from the provided questions and answers.
-- **Compact and Efficient**: Utilizes **lightweight models** such as `MiniLM-L6-v2` with relatively modest parameters, ensuring fast performance and lower computational costs.
-
 ### Architecture Overview
 
 #### 1. **Neuro-Symbolic Design**
 The system leverages a **neuro-symbolic approach**, which combines:
-   - **Neural Networks**: We use **SentenceTransformers** to generate dense embeddings for the questions and queries. This neural model helps compute similarity scores between the query and dataset questions based on the semantic meaning of sentences.
-   - **Symbolic Knowledge Representation**: The system uses **Spacy** to extract **subject-verb-object (SVO)** triples from both the query and the top matched answers. These triples represent relationships and entities in a structured, symbolic manner, forming a lightweight **knowledge graph**.
+   - **Neural Networks**: We use **Autoencoders, Efficientnet CNN and Fully Connected Network** in anomaly prediction, **LSTM Models** in demand forecasting.
+   - We use manufacturing process-ontologies, knowledge graphs and structured knowledge sources as knowledge sources.
+   - 
+#### 2. **Customization to the industrial-based applications**
 
-The combination of these two approaches ensures that the system can:
-   - Understand the **semantic meaning** of queries and answers (neural).
-   - Reason about the **explicit relationships** between entities (symbolic).
-
-#### 2. **Customization to the User's QA Dataset**
-
-The system is designed to be highly flexible and customizable:
-   - It accepts any **JSON-formatted dataset** of questions and answers, which is dynamically processed during runtime. The dataset can include any domain-specific questions and answers, making it adaptable to various contexts (e.g., **tax assistance**, **medical support**, etc.).
-   - The user can update the dataset with new questions and answers without modifying the codebase. The system automatically adjusts to the new content and generates results accordingly.
+The system is designed to be highly flexible and customizable to selected industrial-based applications:
+   - It accepts multimodal data(sensor data and images) in anomaly prediction, sensor data in forecasting and manufacturing manuals (in text format) and sensor data in information retrieving.
 
 #### 3. **Compactness: Lightweight and Efficient Models**
 
 Despite its powerful neuro-symbolic design, the system is highly efficient:
+   - Each individual agent is small, operates efficiently using minimal computational overhead.
    - The **SentenceTransformer model** used in this system, `MiniLM-L6-v2`, is a compact and efficient transformer-based language model with only **33 million parameters**, significantly smaller than many other transformer models like BERT or GPT.
-   - The symbolic reasoning component using **Spacy** operates efficiently, extracting relationships from text with minimal computational overhead.
 
 ### Design Components
 
