@@ -10,6 +10,9 @@ Visit here for the demo: [Demo link](https://drive.google.com/file/d/1gIm5mBb0Wa
 
 🧠 𝙉𝙚𝙪𝙧𝙤𝙨𝙮𝙢𝙗𝙤𝙡𝙞𝙘: Integrates curated data, manufacturing knowledge, and human expertise (subject matters) for enhanced reliability and safety.
 
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
 ## Method and Applications Details
 
 ### Key Features for The SmartPilot
