@@ -11,22 +11,23 @@ Visit here for the demo: [Demo link](https://drive.google.com/file/d/1gIm5mBb0Wa
 ## Method and Applications Details
 
 ### Key Components for The SmartPilot
-i) Agent-based System: 
+#### i) Agent-based System: 
 Consists of three customized agents.
 PredictX: An Anomaly Prediction Agent identifies and predicts anomalies before they occur, alerting manufacturing teams in real-time to prevent disruptions.
 ForeSight: A Demand Forecasting Agent analyzes product data to anticipate demand fluctuations, providing insights and alerts on unexpected events to ensure smooth operations.
 InfoGuide: A Documentation Agent that acts as a Question-and-Answer chatbot, ready to assist with domain-specific queries and generate responses tailored to user needs.
 
-ii) Multimodal Data
-iii) Enterprise Architecture
-iv) Custom, Compact and NeuroSymbolic model:
+#### ii) Multimodal Data
+#### iii) Enterprise Architecture
+#### iv) Custom, Compact and NeuroSymbolic model:
+
 🔧 𝘾𝙪𝙨𝙩𝙤𝙢: Tailored to solve specific industry challenges (here focused on rare events in assembly processes), providing focused and practical solutions.
 
 ⚙️ 𝘾𝙤𝙢𝙥𝙖𝙘𝙩: Lightweight and cost-effective, optimized for real-time deployment on #edge devices.
 
 🧠 𝙉𝙚𝙪𝙧𝙤𝙨𝙮𝙢𝙗𝙤𝙡𝙞𝙘: Integrates curated data, manufacturing knowledge, and human expertise (subject matters) for enhanced reliability and safety.
 
-v) Real-time Deployment
+#### v) Real-time Deployment
 
 
 ### Technical Features for The SmartPilot
