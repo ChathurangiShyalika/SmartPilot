@@ -19,17 +19,20 @@ Consists of three customized agents.<br>
 <br>
 **iii) InfoGuide**: An agent that acts as a Question-and-Answer chatbot, ready to assist with domain-specific queries and generate responses tailored to user needs.
 
-#### 2) Multimodal Data
-#### 3) Enterprise Architecture
-#### 4) Custom, Compact and NeuroSymbolic model:
+#### 2) Multimodal Data:
+Utilizes multimodal data including timeseries, images and text. It uses diverse manufacturing related datasets.
 
+#### 3) Custom, Compact and NeuroSymbolic model:
 🔧 𝘾𝙪𝙨𝙩𝙤𝙢: Tailored to solve specific industry challenges (here focused on rare events in assembly processes), providing focused and practical solutions.
-
 ⚙️ 𝘾𝙤𝙢𝙥𝙖𝙘𝙩: Lightweight and cost-effective, optimized for real-time deployment on #edge devices.
-
 🧠 𝙉𝙚𝙪𝙧𝙤𝙨𝙮𝙢𝙗𝙤𝙡𝙞𝙘: Integrates curated data, manufacturing knowledge, and human expertise (subject matters) for enhanced reliability and safety.
 
-#### 5) Real-time Deployment
+
+#### 4) Real-time Deployment:
+SmartPilot and its agents are deployable on edge-devices.
+
+#### 5) Enterprise Architecture:
+Responsible in integrating and scaling neurosymbolic models within manufacturing systems, ensuring seamless communication, scalability, and compliance across enterprise platforms like MES, ERP, and SCADA. EA also aligns the model with business goals, optimizes resource management, and enforces security protocols for real-time edge computing and data governance.
 
 
 ### Technical Features for The SmartPilot
