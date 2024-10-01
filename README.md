@@ -20,13 +20,18 @@ Consists of three customized agents.<br>
 **iii) InfoGuide**: An agent that acts as a Question-and-Answer chatbot, ready to assist with domain-specific queries and generate responses tailored to user needs.
 
 #### 2) Multimodal Data:
-Utilizes multimodal data including timeseries, images and text. It uses diverse manufacturing related datasets.
+It accepts multimodal data(sensor data and images) in anomaly prediction, sensor data in forecasting and manufacturing manuals (in text format) and sensor data in information retrieving.
+It is trained on diverse manufacturing related datasets. 
 
 #### 3) Custom, Compact and NeuroSymbolic model:
 🔧 𝘾𝙪𝙨𝙩𝙤𝙢: Tailored to solve specific industry challenges (here focused on rare events in assembly processes), providing focused and practical solutions.
-⚙️ 𝘾𝙤𝙢𝙥𝙖𝙘𝙩: Lightweight and cost-effective, optimized for real-time deployment on #edge devices.
-🧠 𝙉𝙚𝙪𝙧𝙤𝙨𝙮𝙢𝙗𝙤𝙡𝙞𝙘: Integrates curated data, manufacturing knowledge, and human expertise (subject matters) for enhanced reliability and safety.
+The system is designed to be highly flexible and customizable to selected industrial-based applications.
 
+⚙️ 𝘾𝙤𝙢𝙥𝙖𝙘𝙩: Lightweight and cost-effective, optimized for real-time deployment on #edge devices.
+Each individual agent is small, operates efficiently using minimal computational overhead.
+
+🧠 𝙉𝙚𝙪𝙧𝙤𝙨𝙮𝙢𝙗𝙤𝙡𝙞𝙘: Integrates curated data, manufacturing knowledge, and human expertise (subject matters) for enhanced reliability and safety.
+We use manufacturing process-ontologies, knowledge graphs and structured knowledge sources as knowledge sources.
 
 #### 4) Real-time Deployment:
 SmartPilot and its agents are deployable on edge-devices.
@@ -48,22 +53,4 @@ Responsible in integrating and scaling neurosymbolic models within manufacturing
 | **Robustness**                      | The ability of AI systems to operate reliably in diverse, unpredictable, and adverse conditions while maintaining accuracy and stability.                                               | Built to adapt to various case complexities in behavioral management, ensuring the system can handle diverse, unpredictable student cases.                                                      The MTSS-CoPilot demonstrates robustness by being able to adapt to diverse and unpredictable student cases within the behavioral health context. Its capacity to handle different levels of intervention based on the unique needs of each student reflects the system's ability to manage uncertainty and maintain reliability in real-world scenarios.                    |
 | **Custom, Neurosymbolic, and Compact**| Describes methods focused on creating AI systems that are tailored to specific industry needs, use neurosymbolic reasoning for explainability, and are optimized for lightweight deployment. | SmartPilot is built as custom solutions tailored to manufacturing industry, using neurosymbolic reasoning for explainability, and optimized for lightweight deployment.  The copilot is custom-built to address specific industry needs, using neurosymbolic AI for enhanced reasoning and explanation. The system is compact, meaning it is lightweight and optimized for real-time use on consumer-grade hardware, aligning with the principles of being cost-effective and accessible for real-world applications.                                                    |
 
-
-### Architecture Overview
-
-#### 1. **Neuro-Symbolic Design**
-The system leverages a **neuro-symbolic approach**, which combines:
-   - **Neural Networks**: We use **Autoencoders, Efficientnet CNN and Fully Connected Network** in anomaly prediction, **LSTM Models** in demand forecasting.
-   - We use manufacturing process-ontologies, knowledge graphs and structured knowledge sources as knowledge sources.
-   - 
-#### 2. **Customization to the industrial-based applications**
-
-The system is designed to be highly flexible and customizable to selected industrial-based applications:
-   - It accepts multimodal data(sensor data and images) in anomaly prediction, sensor data in forecasting and manufacturing manuals (in text format) and sensor data in information retrieving.
-
-#### 3. **Compactness: Lightweight and Efficient Models**
-
-Despite its powerful neuro-symbolic design, the system is highly efficient:
-   - Each individual agent is small, operates efficiently using minimal computational overhead.
-   - The **SentenceTransformer model** used in this system, `MiniLM-L6-v2`, is a compact and efficient transformer-based language model with only **33 million parameters**, significantly smaller than many other transformer models like BERT or GPT.
 
