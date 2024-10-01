@@ -19,6 +19,10 @@ Consists of three customized agents.<br>
 <br>
 **iii) InfoGuide**: An agent that acts as a Question-and-Answer chatbot, ready to assist with domain-specific queries and generate responses tailored to user needs.
 
+
+![alt text](https://github.com/ChathurangiShyalika/Manufacturing_Copilot/blob/master/MultimodalArchitecture.png)
+
+
 #### 2) Multimodal Data:
 It accepts multimodal data(sensor data and images) in anomaly prediction, sensor data in forecasting and manufacturing manuals (in text format) and sensor data in information retrieving.
 It is trained on diverse manufacturing related datasets. 
