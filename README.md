@@ -10,7 +10,7 @@ Visit here for the demo: [Demo link](https://drive.google.com/file/d/1gIm5mBb0Wa
 
 ## Method and Applications Details
 
-### Key Components for The SmartPilot
+### 🔍 Key Components for The SmartPilot
 #### 1) Agent-based System: 
 Consists of three customized agents.<br>
 **i) PredictX**: An anomaly prediction agent identifies and predicts anomalies before they occur, alerting manufacturing teams in real-time to prevent disruptions.
@@ -43,7 +43,7 @@ SmartPilot and its agents are deployable on edge-devices.
 Responsible in integrating and scaling neurosymbolic models within manufacturing systems, ensuring seamless communication, scalability, and compliance across enterprise platforms like MES, ERP, and SCADA. EA also aligns the model with business goals, optimizes resource management, and enforces security protocols for real-time edge computing and data governance.
 
 
-### Technical Features for The SmartPilot
+### ⚙️ Technical Features for The SmartPilot
 
 | **Feature**           | **Feature Description**                                                                                                                                                             | **Example and How we achieved?**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
