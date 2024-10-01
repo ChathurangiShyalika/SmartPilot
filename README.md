@@ -13,9 +13,13 @@ Visit here for the demo: [Demo link](https://drive.google.com/file/d/1gIm5mBb0Wa
 ### Key Components for The SmartPilot
 #### i) Agent-based System: 
 Consists of three customized agents.
-PredictX: An Anomaly Prediction Agent identifies and predicts anomalies before they occur, alerting manufacturing teams in real-time to prevent disruptions.
-ForeSight: A Demand Forecasting Agent analyzes product data to anticipate demand fluctuations, providing insights and alerts on unexpected events to ensure smooth operations.
-InfoGuide: A Documentation Agent that acts as a Question-and-Answer chatbot, ready to assist with domain-specific queries and generate responses tailored to user needs.
+##### PredictX: 
+An Anomaly Prediction Agent identifies and predicts anomalies before they occur, alerting manufacturing teams in real-time to prevent disruptions.
+##### ForeSight: 
+A Demand Forecasting Agent analyzes product data to anticipate demand fluctuations, providing insights and alerts on unexpected events to ensure smooth operations.
+
+##### InfoGuide: 
+A Documentation Agent that acts as a Question-and-Answer chatbot, ready to assist with domain-specific queries and generate responses tailored to user needs.
 
 #### ii) Multimodal Data
 #### iii) Enterprise Architecture
