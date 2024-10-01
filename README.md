@@ -22,8 +22,8 @@ Consists of three customized agents.<br>
 #### 2) Multimodal Data:
 It accepts multimodal data(sensor data and images) in anomaly prediction, sensor data in forecasting and manufacturing manuals (in text format) and sensor data in information retrieving.
 It is trained on diverse manufacturing related datasets. 
-
-![Multimodal Integration Architecture](https://github.com/ChathurangiShyalika/Manufacturing_Copilot/blob/master/MultimodalArchitecture.png "Multimodal Architecture of SamrtPilot")
+The figure below illustrates the interactions between the three agents, showcasing their inputs, outputs, and the interconnections between the various components.
+![Multimodal Integration Architecture](https://github.com/ChathurangiShyalika/Manufacturing_Copilot/blob/master/MultimodalArchitecture.png "Multimodal Architecture of SmartPilot")
 
 
 #### 3) Custom, Compact and NeuroSymbolic model:
