@@ -6,7 +6,7 @@ Visit here for the demo: [Demo link](https://drive.google.com/file/d/1gIm5mBb0Wa
 
 ## Core System Framework: Key Components and Technical Features of the SmartPilot Platform
 
-![alt text](https://github.com/ChathurangiShyalika/Manufacturing_Copilot/blob/master/SmartPilot.png)
+![Core System Framework](https://github.com/ChathurangiShyalika/Manufacturing_Copilot/blob/master/SmartPilot.png "Core System Framework of SmartPilot")
 
 ## Method and Applications Details
 
@@ -19,13 +19,12 @@ Consists of three customized agents.<br>
 <br>
 **iii) InfoGuide**: An agent that acts as a Question-and-Answer chatbot, ready to assist with domain-specific queries and generate responses tailored to user needs.
 
-
-![alt text](https://github.com/ChathurangiShyalika/Manufacturing_Copilot/blob/master/MultimodalArchitecture.png)
-
-
 #### 2) Multimodal Data:
 It accepts multimodal data(sensor data and images) in anomaly prediction, sensor data in forecasting and manufacturing manuals (in text format) and sensor data in information retrieving.
 It is trained on diverse manufacturing related datasets. 
+
+![Multimodal Integration Architecture](https://github.com/ChathurangiShyalika/Manufacturing_Copilot/blob/master/MultimodalArchitecture.png "Multimodal Architecture of SamrtPilot")
+
 
 #### 3) Custom, Compact and NeuroSymbolic model:
 🔧 𝘾𝙪𝙨𝙩𝙤𝙢: Tailored to solve specific industry challenges (here focused on rare events in assembly processes), providing focused and practical solutions.
