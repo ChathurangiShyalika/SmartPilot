@@ -10,13 +10,13 @@ Visit here for the demo: [Demo link](https://drive.google.com/file/d/1gIm5mBb0Wa
 
 🧠 𝙉𝙚𝙪𝙧𝙤𝙨𝙮𝙢𝙗𝙤𝙡𝙞𝙘: Integrates curated data, manufacturing knowledge, and human expertise (subject matters) for enhanced reliability and safety.
 
-## Comprehensive Architecture of SmartPilot
+## Core System Framework: Technical Features and Key Components of the SmartPilot Platform
 
 ![alt text](https://github.com/ChathurangiShyalika/Manufacturing_Copilot/blob/master/SmartPilot.png)
 
 ## Method and Applications Details
 
-### Key Features for The SmartPilot
+### Technical Features for The SmartPilot
 
 | **Feature**           | **Feature Description**                                                                                                                                                             | **Example and How we achieved?**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
