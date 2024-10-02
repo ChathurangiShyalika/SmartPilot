@@ -1,0 +1,8 @@
+jupyterlab
+neo4j~=5.21.0
+py2neo
+graphdatascience
+python-dotenv~=1.0.1
+
+pandas~=2.2.2
+tqdm~=4.66.4

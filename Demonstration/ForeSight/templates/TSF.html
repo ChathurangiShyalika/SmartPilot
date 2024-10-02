@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS-HyMAP</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #530000;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .burgundy-bar {
+            height: 40px;
+            background-color: #530000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 36px;
+            color: #530000;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .instructions-container {
+            width: 50%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-right: 20px;
+        }
+
+        .chart-container {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            font-size: 18px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .cycle-state1 {
+            font-weight: bold;
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #530000;
+            color: white;
+            text-align: center;
+            padding: 0.5px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 12px;
+        }
+
+        .buttons-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #startCollecting,
+        #Stop {
+            background-color: #530000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+
+        #startCollecting[disabled],
+        #Stop[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        #Instructions {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1> Foresight </h1>
+        </div>
+    </header>
+
+    <div class="burgundy-bar"></div>
+
+    <div class="main-container">
+        <div class="instructions-container">
+            <div id="Instructions">
+                <b>Instructions:</b><br><br>
+                1) Start the production process, same time press the "Start Analyze" button.<br><br>
+                2) If the production has not started, "No Values" will appear in the table above.<br><br>
+                3) Once the production process starts, the corresponding values for products are shown in the graph to the right.<br><br>
+                4) The forecasted text box will display the forecasted demands.
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <td class="cycle-state1">Product ID:</td>
+                    <td id="ProductID1" class="cycle-state">Product 1</td>
+                    <td id="ProductID2" class="cycle-state">Product 2</td>
+                </tr>
+                <tr>
+                    <td class="cycle-state1">Forecasted Demand:</td>
+                    <td id="ForecastDemand1" class="cycle-state">Click Start Analyze First</td>
+                    <td id="ForecastDemand2" class="cycle-state">Click Start Analyze First</td>
+                </tr>
+                <tr>
+                    <td class="cycle-state1">Date and Hour:</td>
+                    <td id="DateHour1" class="cycle-state">09-15-2024 03:20:20</td>
+                    <td id="DateHour2" class="cycle-state">09-15-2024 03:20:20</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="chartR02"></canvas>
+            <canvas id="chartR03"></canvas>
+        </div>
+    </div>
+
+    <div class="buttons-container">
+        <button id="startCollecting">Start Analyzing</button>
+        <button id="Stop" disabled>Stop Analyzing</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctxR02 = document.getElementById('chartR02').getContext('2d');
+        var ctxR03 = document.getElementById('chartR03').getContext('2d');
+
+        var chartR02 = new Chart(ctxR02, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [
+                    {
+                        label: 'Product ID 1',
+                        data: [],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Forecasted Product ID 1',
+                        data: [],
+                        borderColor: 'rgba(255, 159, 64, 1)',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        var chartR03 = new Chart(ctxR03, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [
+                    {
+                        label: 'Product ID 2',
+                        data: [],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Forecasted Product ID 2',
+                        data: [],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        var intervalId;
+        var currentDate = new Date("09-15-2024 03:20:20");
+
+        function startCollectingData() {
+            document.getElementById('startCollecting').disabled = true;
+            document.getElementById('Stop').disabled = false;
+
+            intervalId = setInterval(() => {
+                fetchData();
+            }, 2000); // Update every 2 seconds
+        }
+
+        function stopCollectingData() {
+            clearInterval(intervalId);
+            document.getElementById('startCollecting').disabled = false;
+            document.getElementById('Stop').disabled = true;
+        }
+
+        function fetchData() {
+            // Simulating dummy data with variation
+            var newDataPointR02 = Math.floor(Math.random() * 100); // Random data for chartR02
+            var newDataPointR03 = Math.floor(Math.random() * 100); // Random data for chartR03
+            var predictedR02 = newDataPointR02 + (Math.random() * 10 - 5); // Random forecasted data
+            var predictedR03 = newDataPointR03 + (Math.random() * 10 - 5); // Random forecasted data
+
+            // Update charts
+            chartR02.data.labels.push(chartR02.data.labels.length);
+            chartR02.data.datasets[0].data.push(newDataPointR02);
+            chartR02.data.datasets[1].data.push(predictedR02);
+            chartR02.update();
+
+            chartR03.data.labels.push(chartR03.data.labels.length);
+            chartR03.data.datasets[0].data.push(newDataPointR03);
+            chartR03.data.datasets[1].data.push(predictedR03);
+            chartR03.update();
+
+            // Update table with forecasted demand
+            document.getElementById('ForecastDemand1').innerText = predictedR02.toFixed(2); // Product 1 demand
+            document.getElementById('ForecastDemand2').innerText = predictedR03.toFixed(2); // Product 2 demand
+
+            // Update date and time, increase by 1 hour for each update
+            currentDate.setHours(currentDate.getHours() + 1);
+            var formattedDate = currentDate.toISOString().slice(0, 19).replace("T", " ");
+            document.getElementById('DateHour1').innerText = formattedDate;
+            document.getElementById('DateHour2').innerText = formattedDate;
+        }
+
+        document.getElementById('startCollecting').addEventListener('click', startCollectingData);
+        document.getElementById('Stop').addEventListener('click', stopCollectingData);
+    </script>
+
+    <footer>2024 @SmartPilot</footer>
+</body>
+</html>

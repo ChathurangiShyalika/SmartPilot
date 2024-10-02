@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>neXt | Root Cause Analysis</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Grey background color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+
+        .logo {
+            display: block; /* Display logo as a block element */
+            margin: 0 auto; /* Center the logo horizontally */
+            width: 200px; /* Set width of the logo */
+            height: auto; /* Maintain aspect ratio */
+            padding-top: 20px; /* Add some padding at the top */
+        }
+
+
+        header {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: space-between; /* Distribute items evenly along the main axis */
+            color: #530000; /* Text color for header */
+            padding: 10px; /* Padding for header */
+            background-color: #FFF
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center; /* Center the images horizontally */
+            align-items: center; /* Align images vertically in the middle */
+            width: 20%; /* Make sure the container spans the full width */
+        }
+        .logo img {
+            margin: 0 10px; /* Optional: Add some horizontal spacing between images */
+            max-width: 300px; /* Set max-width */
+            max-height: 300px; /* Set max-height */
+            width: auto; /* Maintain aspect ratio */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .burgundy-bar {
+            height: 40px; /* Adjust height of the bar */
+            background-color: #530000; /* Set background color of the bar */
+        }
+        .burgundy-bar button {
+            background-color: #530000; /* Set button background color */
+            color: white; /* Set button text color */
+            border: 1px; /* Set border color */
+            padding: 4.5px 4px; /* Add padding to the button */
+            cursor: pointer; /* Change cursor to pointer */
+            font-size: 12px; /* Set font size */
+            margin: 0 auto; /* Center align the button */
+        }
+        .burgundy-bar button:hover {
+            background-color: #3d0101; /* Change background on hover */
+        }
+        h1 {
+            font-size: 48px; /* Set the font size to 24 pixels */
+        }
+        .container {
+            display: table;
+            width: 100%;
+            margin-top: 20px;;
+            }
+            .left-half, .right-half {
+                display: table-cell;
+                vertical-align: top;
+            }
+            .left-half {
+                width: 45%;
+                padding-left: 10px;
+            }
+            .right-half {
+                width: 45%;
+                text-align: center;
+                padding-left: 10px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            td, th {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='USClogo.png') }}" alt="Logo">
+        </div>
+        <h1>neXt | Future Factories</h1>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='nextLogo.png') }}" alt="Logo">
+            <img src="{{ url_for('static', filename='aiiscLogo.png') }}" alt="Logo">
+        </div>
+    </header>
+    <div class="burgundy-bar">
+        <button style = "margin-left: 100px; font-size: 25px; color: white;"><a style="color: white;text-decoration: none;" href="TSC.html">Time Series Classification</a></button>
+        <button style = "margin-left: 200px; font-size: 25px; color: white;"><a style="color: white;text-decoration: none;" href="RCA.html">Root Cause Analysis</a></button>
+    </div>
+    <h2 align="center" style="margin-bottom: 0px;" > Root Cause Analysis</h2>
+    <div align = "center" style="margin-top: 20px;" >
+        <button id="determineCause" >Determine Cause</button>
+    </div>
+
+    <div class="container">
+        <div class="left-half">
+            <table id="data-table">
+                <tr>
+                    <td id = "Sensor" style="font-weight: bold;">Sensor</td>
+                    <td id = "Robot" style="font-weight: bold;">Robot</td>
+                    <td id = "CycleState" style="font-weight: bold;">Cycle State</td>
+                    <td id="Function" style="font-weight: bold;">Function</td>
+                </tr>
+            </table>
+            <div id="Instructions">
+              <br> <b>Instructions:</b> <br><br>
+                1) Should the classification phase return an Anomaly, this page can be used to determine possible phases in which this anomaly could have occurred. <br><br>
+                2) The data collected previously during the assembly will be utilized again and analyzed to outline any possible causes for this anomaly. <br><br>
+                3) Click on the "Determine Cause" button to analyze the data and the results will be populated in the above table.<br><br>
+                4) Each row in the table corresponds to anomalous data found in a specific cycle state.<br><br>
+                5) The sensor and robot columns outline the specific location that this anomalous data was generated. <br><br>
+                6) The cycle state and function columns outline what phase of the assembly cycle that anomaly occurred. <br><br>
+            </div>
+        </div>
+        <div class="right-half" id="imageContainer" style="max-width: 100%;">
+            <img id = "TopView" src="{{ url_for('static', filename='TopView.png') }}" alt="Description of Image" style="max-width: 100%;">
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+         document.getElementById('determineCause').addEventListener('click', function() {
+            fetch('http://127.0.0.1:5000/RootCause')
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById('data-table');
+                    table.innerHTML = `
+                        <tr>
+                            <th>Sensor</th>
+                            <th>Robot</th>
+                            <th>Cycle State</th>
+                            <th>Function</th>
+                        </tr>
+                    `;
+
+                    data.forEach(item => {
+                        const row = table.insertRow();
+                        row.insertCell(0).innerHTML = item.anomalous_sensor_variables;
+                        row.insertCell(1).innerHTML = item.robot_names;
+                        row.insertCell(2).innerHTML = item.cycle_state;
+                        row.insertCell(3).innerHTML = item.cycle_function;
+                    });
+
+                    const imageContainer = document.getElementById('imageContainer');
+                    imageContainer.innerHTML = ''; // Clear existing images
+                    const processedSensors = new Set(); // Set to keep track of processed sensors
+
+                    data.forEach(sensorData => {
+                        const sensor = sensorData.sensor;
+                        if (!processedSensors.has(sensor)) {
+                            const imageElement = document.createElement('img');
+                            switch(sensorData.sensor) {
+                                case 'Potentiometer 2':
+                                    imageElement.src = "{{ url_for('static', filename='R02_Pot.png') }}";
+                                    break;
+                                case 'Potentiometer 3':
+                                    imageElement.src = "{{ url_for('static', filename='R03_Pot.png') }}";
+                                    break;
+                                case 'Load cell 3':
+                                    imageElement.src = "{{ url_for('static', filename='R03_Load.png') }}";
+                                    break;
+                                default:
+                                    imageElement.src = "{{ url_for('static', filename='TopView.png') }}";
+                                    break;
+                            }
+                            imageElement.style.maxWidth = '100%';
+                            imageContainer.appendChild(imageElement);
+
+                            processedSensors.add(sensor);
+                        }
+                    })
+                })
+                .catch(error => console.error('Error fetching root cause:', error));
+        });
+    </script>
+</body>
+</html>

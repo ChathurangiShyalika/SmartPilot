@@ -1,0 +1,9 @@
+graph_data
+data
+mfg-data/Analog Dataset
+neo4j_data
+raw_files
+neo4j_plugins
+python_files/myenv
+notebooks/.ipynb_checkpoints
+python_files/__pycache__

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS-HyMAP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #530000; /* Header color */
+            color: white;
+            text-align: center;
+            padding: 20px 0; /* Padding for the header */
+        }
+        .chat-container {
+            width: 100%; /* Set width to 100% of the dashboard container */
+            max-width: 600px; /* Optional: Set a maximum width for better aesthetics */
+            margin: 50px auto; /* Center the chat container */
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-box {
+            padding: 20px;
+            height: 600px; /* Height remains the same */
+            overflow-y: auto;
+            background-color: #e9f0f5;
+            width: 100%; /* Set width to 100% of the container */
+        }
+        .message {
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 18px;
+            display: inline-block;
+            max-width: 70%;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            opacity: 0;
+            animation: fadeIn 0.3s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .user-message {
+            background: linear-gradient(135deg, #007bff, #0056d2);
+            color: white;
+            align-self: flex-end;
+            text-align: right;
+            border-bottom-right-radius: 0;
+        }
+        .bot-message {
+            background: linear-gradient(135deg, #e2e2e2, #d6d6d6);
+            color: black;
+            align-self: flex-start;
+            text-align: left;
+            border-bottom-left-radius: 0;
+        }
+        .input-box {
+            display: flex;
+            padding: 15px;
+            background-color: white;
+            border-top: 1px solid #ccc;
+        }
+        .input-box input {
+            flex: 1;
+            padding: 15px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        .input-box input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .input-box button {
+            padding: 15px 25px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .input-box button:hover {
+            background-color: #0056d2;
+        }
+        footer {
+            background-color: #530000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 12px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+            box-sizing: border-box;
+        }
+        #Instructions {
+            width: 35%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .dashboard-container {
+            width: 60%; /* Width of the right panel */
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>InfoGuide</h1>
+    </header>
+    <div class="container">
+        <div id="Instructions">
+            <h2>Instructions</h2>
+            <p>1. Click on 'Start Collecting' to begin data collection.</p>
+            <p>2. Use the chat feature to interact with the AI.</p>
+            <p>3. Click on 'Predict' to get predictions based on the collected data.</p>
+        </div>
+        <div class="dashboard-container">
+            <h2>Dashboard</h2>
+            <div class="chat-container">
+                <div class="chat-box" id="chat-box">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                <div class="input-box">
+                    <input type="text" id="user-input" placeholder="Type a message...">
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 SmartPilot. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('send-button').addEventListener('click', function() {
+            const userInput = document.getElementById('user-input');
+            const chatBox = document.getElementById('chat-box');
+
+            if (userInput.value.trim()) {
+                const userMessage = document.createElement('div');
+                userMessage.className = 'message user-message';
+                userMessage.textContent = userInput.value;
+                chatBox.appendChild(userMessage);
+
+                // Clear input field
+                userInput.value = '';
+
+                // Define bot responses
+                let botResponse = '';
+
+                if (userMessage.textContent.toLowerCase().includes('will an anomaly occur in the next 10 minutes')) {
+                    botResponse = "Yes, an anomaly is expected to occur within the next 6 minutes. The anomaly involves entities classified as 'NoBody1' and 'NoNose.'";
+                } else if (userMessage.textContent.toLowerCase().includes('expected demand for vegemite product type 1')) {
+                    botResponse = "The projected demand for Vegemite product type 1 is 150 cans over the next hour.";
+                } else {
+                    botResponse = "I'm sorry, I can only provide information about anomalies and Vegemite demand.";
+                }
+
+                // Simulate bot response
+                setTimeout(() => {
+                    const botMessage = document.createElement('div');
+                    botMessage.className = 'message bot-message';
+                    botMessage.textContent = botResponse;
+                    chatBox.appendChild(botMessage);
+                    chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>

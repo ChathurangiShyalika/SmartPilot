@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS-HyMAP</title>
+    <style>
+    body {
+        background-color: #f4f4f4; /* Light grey background */
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif; /* Modern font */
+        color: #333; /* Darker text color */
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #530000; /* Burgundy background */
+        padding: 20px;
+        color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    }
+
+    .logo img {
+        max-width: 180px; /* Adjusted size */
+        height: auto;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .burgundy-bar {
+        height: 40px;
+        background-color: #530000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burgundy-bar button {
+        background-color: #530000;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 0 15px;
+    }
+
+    .burgundy-bar button:hover {
+        background-color: #3d0101;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 36px;
+        color: #530000;
+    }
+
+    .main-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .instructions-container {
+        width: 45%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .buttons-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #determineCause {
+        background-color: #530000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+
+    #determineCause:hover {
+        background-color: #3d0101;
+    }
+
+    #Instructions {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .table-container {
+        width: 45%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-left: 20px;
+    }
+    footer {
+    background-color: #530000;
+    color: white;
+    text-align: center;
+    padding: 0.5px 0; /* Further reduce padding for a shorter footer */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 12px; /* Reduce font size for a more compact footer */
+}
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    td, th {
+        font-size: 18px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f9f9f9;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='USClogo.png') }}" alt="USC Logo">
+            </div>
+            <h1>NS-HyMAP: Multimodal Anomaly Prediction Dashboard</h1>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='AIISC_logo.png') }}" alt="AIISC Logo">
+            </div>
+
+            <div class="logo">
+                <img src="{{ url_for('static', filename='nextLogo.png') }}" alt="neXt Logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="burgundy-bar">
+        <button><a style="color: white;text-decoration: none;" href="NS_HyMAP.html">Main Page</a></button>
+        <button><a style="color: white;text-decoration: none;" href="TSF.html">Prediction Dashboard</a></button>
+    </div>
+
+    <h2>User-level explanations for the anomalies</h2>
+
+    <div class="main-container">
+        <div class="instructions-container">
+            <div id="Instructions">
+                <b>Instructions:</b> <br><br>
+                1) Should the prediction phase return an Anomaly, this page can be used to determine possible phases in which this anomaly could have occurred. <br><br>
+                2) The data collected previously during the assembly will be utilized again and analyzed to outline any possible causes for this anomaly. <br><br>
+                3) Click on the "Determine Cause" button to analyze the data and the results will be populated in the above table.<br><br>
+                4) Each row in the table corresponds to anomalous data found in a specific cycle state.<br><br>
+                5) The sensor and robot columns outline the specific location that this anomalous data was generated. <br><br>
+                6) The cycle state and function columns outline what phase of the assembly cycle that anomaly occurred. <br><br>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="buttons-container">
+                <button id="determineCause">Determine Explanations</button>
+            </div>
+
+            <table id="data-table">
+                <tr>
+                    <th>Sensor</th>
+                    <th>Robot</th>
+                    <th>Cycle State</th>
+                    <th>Function</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.getElementById('determineCause').addEventListener('click', function() {
+            fetch('http://127.0.0.1:5000/RootCause')
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById('data-table');
+                    table.innerHTML = `
+                        <tr>
+                            <th>Sensor</th>
+                            <th>Robot</th>
+                            <th>Cycle State</th>
+                            <th>Function</th>
+                        </tr>
+                    `;
+
+                    data.forEach(item => {
+                        const row = table.insertRow();
+                        row.insertCell(0).innerHTML = item.anomalous_sensor_variables;
+                        row.insertCell(1).innerHTML = item.robot_names;
+                        row.insertCell(2).innerHTML = item.cycle_state;
+                        row.insertCell(3).innerHTML = item.cycle_function;
+                    });
+
+                    const imageContainer = document.getElementById('imageContainer');
+                    imageContainer.innerHTML = ''; // Clear existing images
+                    const processedSensors = new Set(); // Set to keep track of processed sensors
+
+                    data.forEach(sensorData => {
+                        const sensor = sensorData.sensor;
+                        if (!processedSensors.has(sensor)) {
+                            const imageElement = document.createElement('img');
+                            switch(sensorData.sensor) {
+                                case 'Potentiometer 2':
+                                    imageElement.src = "{{ url_for('static', filename='R02_Pot.png') }}";
+                                    break;
+                                case 'Potentiometer 3':
+                                    imageElement.src = "{{ url_for('static', filename='R03_Pot.png') }}";
+                                    break;
+                                case 'Load cell 3':
+                                    imageElement.src = "{{ url_for('static', filename='R03_Load.png') }}";
+                                    break;
+                                default:
+                                    imageElement.src = "{{ url_for('static', filename='TopView.png') }}";
+                                    break;
+                            }
+                            imageElement.style.maxWidth = '100%';
+                            imageContainer.appendChild(imageElement);
+
+                            processedSensors.add(sensor);
+                        }
+                    });
+                })
+                .catch(error => console.error('Error fetching root cause:', error));
+        });
+    </script>
+ <footer>
+        <p>2024 @NS-HyMAP</p>
+    </footer>
+</body>
+
+</html>

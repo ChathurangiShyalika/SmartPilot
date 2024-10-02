@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NS-HyMAP</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center items horizontally */
+            background-color: #530000;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Space between logos and heading */
+            flex: 1; /* Allow logos and heading to use available space */
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin: 0 20px; /* Margin on left and right */
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .burgundy-bar {
+            background-color: #3d0101;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        footer {
+    background-color: #530000;
+    color: white;
+    text-align: center;
+    padding: 0.5px 0; /* Further reduce padding for a shorter footer */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 12px; /* Reduce font size for a more compact footer */
+}
+
+        .burgundy-bar button {
+            background-color: #530000;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 0 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .burgundy-bar button:hover {
+            background-color: #750000;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+            box-sizing: border-box;
+        }
+
+        #Instructions {
+            width: 35%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .point {
+            text-align: left;
+            font-size: 18px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            position: relative;
+            animation: slideInFromLeft 1s ease forwards;
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .dashboard-container {
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .dashboard-counter {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            margin: 20px;
+        }
+
+        .counter-value {
+            font-size: 50px;
+            color: #530000;
+            animation: zoomIn 0.5s ease-out forwards;
+        }
+
+        .rocket-icon {
+            width: 100px;
+            height: 100px;
+            animation: rotateIn 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateIn {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rocket-animation {
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+            animation: flySemicircle 10s linear infinite;
+        }
+
+        @keyframes flySemicircle {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(50vw, -50vh) rotate(45deg);
+            }
+            50% {
+                transform: translate(100vw, 0) rotate(90deg);
+            }
+            100% {
+                transform: translate(100vw, 0) rotate(90deg);
+                opacity: 0;
+            }
+        }
+
+        #startCollecting,
+        #Predict {
+            background-color: #530000;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #startCollecting:hover,
+        #Predict:hover {
+            background-color: #750000;
+        }
+
+        #startCollecting[disabled],
+        #Predict[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='USClogo.png') }}" alt="USC Logo">
+            </div>
+            <h1>NS-HyMAP: Multimodal Anomaly Prediction Dashboard</h1>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='AIISC_logo.png') }}" alt="AIISC Logo">
+            </div>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='nextLogo.png') }}" alt="Next Logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="burgundy-bar">
+        <button><a style="color: white; text-decoration: none;" href="TSF.html">Prediction Dashboard</a></button>
+        <button><a style="color: white; text-decoration: none;" href="RCA.html">Explanation Dashboard</a></button>
+    </div>
+
+    <div class="container">
+        <div id="Instructions">
+            <b>Instructions:</b> <br><br>
+            <div class="point">1) Welcome to the UI of the paper titled "NS-HyMAP: Neurosymbolic Multimodal Hybrid Fusion with Transfer Learning for Robust and Interpretable Anomaly Prediction"</div>
+            <div class="point">2) Click "Prediction Dashboard" to enter the Anomaly prediction portal</div>
+            <div class="point">3) After the prediction is done, Click "Explanation Dashboard" to retrieve user-level explanations for the predictions.</div>
+        </div>
+
+        <div class="dashboard-container">
+            <div class="dashboard-counter">
+                <img src="{{ url_for('static', filename='rocket.png') }}" alt="Rocket" class="rocket-icon">
+                <div class="counter-value" id="rocketCount">0</div>
+                <div>Rockets Produced</div>
+            </div>
+            <div class="dashboard-counter">
+                <img src="{{ url_for('static', filename='rocket.png') }}" alt="Rocket" class="rocket-icon">
+                <div class="counter-value" id="anomalyCount">0</div>
+                <div>Anomalies Detected</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rocket Animation -->
+    <img src="{{ url_for('static', filename='rocket.png') }}" alt="Rocket" class="rocket-animation" id="flyingRocket">
+
+
+    <script>
+        // Update rocket count and anomaly count every second for demo
+        let rocketCount = 0;
+        let anomalyCount = 0;
+
+        setInterval(() => {
+            document.getElementById('rocketCount').textContent = ++rocketCount;
+            document.getElementById('anomalyCount').textContent = Math.floor(Math.random() * 10);
+        }, 1000);
+    </script>
+ <footer>
+        <p>2024 @NS-HyMAP</p>
+    </footer>
+</body>
+</html>

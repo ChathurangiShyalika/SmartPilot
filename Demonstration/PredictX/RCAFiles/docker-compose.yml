@@ -1,0 +1,70 @@
+version: '3.7'
+
+services:
+  neo4j:
+    image: neo4j:5.16.0-community 
+    container_name: neo4j
+    hostname: neo4j
+    volumes:
+  
+      # path where your graph data needs to be stored
+      - $HOME/Documents/RCAProject/graph_data:/data
+      # path where your raw data is stored (this will be imported into neo4j to ocnstruct graph)
+      - $HOME/Documents/RCAProject/raw_files:/var/lib/neo4j/import
+      # path where neo4j plugins are stored
+      - $HOME/Documents/RCAProject/plugins:/var/lib/neo4j/plugins
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    user: "$UID:$GID"
+    environment:
+      - NEO4J_AUTH=${NEO4J_USER_NAME}/${NEO4J_PASSWD}
+      - NEO4JLABS_PLUGINS=["apoc"]
+      - apoc.import.file.enabled=true
+      - apoc.export.file.enabled=true
+      - apoc.export.json.all=true
+      # Comment these lines if you do not have the memory available
+      - NEO4J_server_memory_pagecache_size=2G
+      - NEO4j_server_memory_heap_initial__size=2G
+      - NEO4J_server_memory_heap_max__size=4G
+    networks:
+      - neo_net_kg
+    healthcheck:
+      test: wget http://localhost:7474 || exit 1
+      interval: 1s
+      timeout: 10s
+      retries: 20
+      start_period: 3s
+
+# Uncomment below if you want jupyterlab connecting to Neo4j
+  # jupyterlab:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: jupyterlab
+  #   # runtime: nvidia
+  #   hostname: jupyterlab_kg
+  #   ports:
+  #     - "8888:8888"
+  #   volumes:
+  #     - ./notebooks:/home/jovyan/work
+  #   links:
+  #     - neo4j
+  #   networks:
+  #     - neo_net_kg
+  #   user: root
+  #   working_dir: /home/$USER
+  #   environment:
+  #     - NB_USER=$USER
+  #     - NB_GROUP=$GROUP
+  #     - NB_UID=$UID
+  #     - NB_GID=$GID
+  #     - CHOWN_HOME=yes
+  #     - CHOWN_HOME_OPTS= -R
+  #     - JUPYTER_TOKEN=${JUPYTER_TOKEN}
+  #     - NEO4J_URI=bolt://neo4j:7687
+  #     - NEO4J_USER_NAME=${NEO4J_USER_NAME} #from .env file
+  #     - NEO4J_PASSWD=${NEO4J_PASSWD} #from .env file
+
+networks:
+  neo_net_kg:    

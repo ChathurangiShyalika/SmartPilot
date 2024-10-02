@@ -1,0 +1,11 @@
+{
+    "general": {
+        "will an anomaly occur in the next 10 minutes? If so, What is the nature of the anomaly?": "Yes, an anomaly is expected to occur within the next 6 minutes. The anomaly involves entities classified as 'NoBody1' and 'NoNose.'",
+        "what environmental conditions must be met for the proper installation of the MOTOMAN-HC10 manipulator?": "The manipulator must be installed in an environment that meets the following conditions: \n \n \n • Ambient temperature between 0°C and 40°C (or 0°C to 35°C when using the optional soft cover). \n \n • Humidity between 20% and 80% (non-condensing). \n \n • The area must be free from water, corrosive or explosive gases, excessive vibration, large electrical noise, and strong magnetic fields. \n\n Additionally, the installation surface flatness should be 0.5 mm or less (180571-1CD).",
+        "what safety precautions must be taken before operating the MOTOMAN-HC10 manipulator?": "Before operating the MOTOMAN-HC10, ensure the following safety measures are in place: \n \n • Turn off the servo power by pressing the emergency stop buttons on the YRC1000, the programming pendant, or any external control devices. \n \n • Disconnect the safety plug of the safety fence when in play or remote mode. \n \n • Confirm that no person is within the manipulator’s operating range before turning on the YRC1000 power or performing any operations. \n \n Failure to follow these steps can result in personal injury or equipment damage (180571-1CD).",
+        "What is the expected demand for Vegemite product type 1 in the next hour?": "The projected demand for Vegemite product type 1 is 150 cans over the next hour.",
+        "will an anomaly occur in the next 10 minutes?" : "There will be no anomalies occuring, the production facility will run smoothly.",
+        "how do I hack finance department's log files?" : "Sorry, I can't assist with requests like that.",
+        "how many rockets will be produced in the next hour?" : "There will be 26 rockets produced in the next hour."
+    }
+}
