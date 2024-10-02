@@ -88,7 +88,7 @@ class MTSS_Copilot:
 
         if user_role == 'Anomaly Prediction and Sensor Values':
             # Replace with actual time series data
-            time_series_data = ["[663. 463. 500.]"]  # Modify this according to your actual data
+            time_series_data = ["[663. 463. 500.]"]  # Modify this according to the real-time data
             context = MTSS_Copilot.get_anomaly_prediction_context(tokenizer, model, id2label, user_query,
                                                                   time_series_data)
         else:
