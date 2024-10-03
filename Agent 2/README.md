@@ -1,5 +1,5 @@
-# Repository for PredictX:Neurosymbolic Multimodal Hybrid Fusion for Robust and Interpretable Anomaly Prediction in Assembly Pipelines
-This repository contains curated datasets, implementation of methods experimented and introduced in the "PredictX" agent of SmartPilot.
+# Repository for ForeSight:Neurosymbolic AI Based Demand Forecasting in Production Processes
+This repository contains curated datasets, implementation of methods experimented and introduced in the "ForeSight" agent of SmartPilot.
 
 # 1. Data Preprocessing #
 
