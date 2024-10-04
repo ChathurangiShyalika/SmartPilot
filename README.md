@@ -37,7 +37,7 @@ Each individual agent is small, operates efficiently using minimal computational
 We use manufacturing based process-ontologies, knowledge graphs and structured knowledge sources as knowledge sources.
 
 #### 4) Real-time Deployment:
-SmartPilot and its agents are deployable on edge-devices. SmartPilot and its agents are deployable on edge devices. It is currently implemented in two manufacturing facilities, one focused on toy rocket assembly and the other on Vegemite production processes.
+SmartPilot and its agents are deployable on edge-devices. SmartPilot and its agents are deployable on edge devices. It is currently deployed in two manufacturing facilities, one focused on toy rocket assembly and the other on Vegemite production process.
 
 #### 5) Enterprise Architecture:
 Responsible in integrating and scaling neurosymbolic models within manufacturing systems, ensuring seamless communication, scalability, and compliance across enterprise platforms like MES, ERP, and SCADA. EA also aligns the model with business goals, optimizes resource management, and enforces security protocols for real-time edge computing and data governance.
