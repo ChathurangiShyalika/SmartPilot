@@ -19,7 +19,7 @@ class MTSS_Copilot:
         model_checkpoint = 'final_best_model'
         tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
 
-        df = pd.read_excel('/Users/ledarssan/AIISC/CCN_models/models/SmartPilot/Agent_3/src/LLM_FT_dataset.csv')  # Update path as necessary
+        df = pd.read_excel('/Users/ledarssan/AIISC/CCN_models/models/SmartPilot/Agent 3: InfoGuide/src/LLM_FT_dataset.csv')  # Update path as necessary
 
         unique_labels = df['predicted_label'].unique().tolist()
         id2label = {i: label for i, label in enumerate(unique_labels)}

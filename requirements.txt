@@ -1,3 +1,16 @@
+python==3.9.12
+pandas
+torch==2.1.2
+pytorch-lightning==2.0.7
+numpy
+sklearn
+PIL
+transformers
+csv
+os
+tensorflow==2.16.2
+keras==3.4.1
+efficientnet_pytorch==0.7.1
 flair==0.13.1
 distro==1.9.0
 groq==0.8.0
@@ -11,3 +24,4 @@ datasets
 evaluate
 transformers
 peft
+
